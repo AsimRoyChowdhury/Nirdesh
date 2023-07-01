@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Plutur';
+  src: url('./assets/Plutur.ttf')  format('truetype');
+  src: url('./assets/Plutur.otf')  format('opentype'),
+}
+
+@font-face {
+  font-family: 'nusar';
+  src: url('./assets/NUSAR/NUSAR.ttf')  format('truetype');
+  src: url('./assets/NUSAR/NUSAR.otf')  format('opentype'),
+}
+
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: url('./assets/bg.svg');
+  z-index: -10;
+  filter: brightness(50%);
+  background-size: 100%;
+}
+
+.line-1{
+  position: relative;
+  top: 50%;
+  border-right: 2px solid rgba(255,255,255,.75);
+  font-size: 180%;
+  white-space: nowrap;
+  overflow: hidden;
+  transform: translateY(-50%);    
+}
+
+.anim-typewriter{
+animation: typewriter 1s steps(27) 1s 1 normal both,
+           blinkTextCursor 1000ms infinite normal;
+}
+@keyframes typewriter{
+0%{
+  width: 0%; border-right: 0px;}
+1%{
+  width: 0%; border-right: 2px solid rgba(255,255,255,.75);}
+99%{
+  width: min-content; border-right: 2px solid rgba(255,255,255,.75);
+}
+100%{width: min-content; border-right: 0px;} 
+}
+
+@keyframes blinkTextCursor{
+  0%{
+    border-right-color: #ffffff;}
+  25%{
+    border-right-color: #ffffff;
+  }
+  50%{border-right-color: transparent;}
+  75%{
+    border-right-color: #ffffff;
+  }
+  100%{
+    border-right-color: transparent;
+  } 
+}
+
+
+.tracking-in-contract {
+	-webkit-animation: tracking-in-contract 1.5s cubic-bezier(0.215, 0.610, 0.355, 1.000) 5s both;
+	        animation: tracking-in-contract 1.5s cubic-bezier(0.215, 0.610, 0.355, 1.000) 5s both;
+}
+
+ @-webkit-keyframes tracking-in-contract {
+  0% {
+    letter-spacing: 1em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    letter-spacing: normal;
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-contract {
+  0% {
+    letter-spacing: 1em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    letter-spacing: normal;
+    opacity: 1;
+  }
+}
+
+
+.tracking-in-expand {
+	-webkit-animation: tracking-in-expand 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) 5s both;
+	        animation: tracking-in-expand 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) 5s both;
+}
+
+@-webkit-keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+.nirdesh-heading{
+  font-size: 10vw;
+  font-weight: 500;
+}
