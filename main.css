@@ -129,8 +129,15 @@ animation: typewriter 1s steps(27) 1s 1 normal both,
   }
 }
 
+.hide-caret::after {
+  content: '';
+  opacity: 0
+}
+
 
 .nirdesh-heading{
-  font-size: 10vw;
+  font-size: 12vw;
   font-weight: 500;
+  stroke-dasharray: 3200;
+  stroke-dashoffset: 1000;
 }
