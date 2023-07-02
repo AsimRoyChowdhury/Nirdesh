@@ -1,0 +1,215 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Plutur';
+  src: url('./assets/Plutur.ttf')  format('truetype');
+  src: url('./assets/Plutur.otf')  format('opentype'),
+}
+
+@font-face {
+  font-family: 'nusar';
+  src: url('./assets/NUSAR/NUSAR.ttf')  format('truetype');
+  src: url('./assets/NUSAR/NUSAR.otf')  format('opentype'),
+}
+
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+}
+
+#particles-js {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -100;
+}
+
+
+.line-1{
+  position: relative;
+  top: 50%;
+  border-right: 2px solid rgba(255,255,255,.75);
+  font-size: 180%;
+  white-space: nowrap;
+  overflow: hidden;
+  transform: translateY(-50%);    
+}
+
+.anim-typewriter{
+animation: typewriter 1s steps(27) 1s 1 normal both,
+           blinkTextCursor 1000ms infinite normal;
+}
+@keyframes typewriter{
+0%{
+  width: 0%; border-right: 0px;}
+1%{
+  width: 0%; border-right: 2px solid rgba(255,255,255,.75);}
+99%{
+  width: min-content; border-right: 2px solid rgba(255,255,255,.75);
+}
+100%{width: min-content; border-right: 0px;} 
+}
+
+@keyframes blinkTextCursor{
+  0%{
+    border-right-color: #ffffff;}
+  25%{
+    border-right-color: #ffffff;
+  }
+  50%{border-right-color: transparent;}
+  75%{
+    border-right-color: #ffffff;
+  }
+  100%{
+    border-right-color: transparent;
+  } 
+}
+
+
+.tracking-in-expand {
+	-webkit-animation: tracking-in-expand 4s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	        animation: tracking-in-expand 4s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+@-webkit-keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+	-webkit-animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+ @-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+.animate-charcter
+{
+  text-transform: uppercase;
+  font-weight: 600;
+  background-image: linear-gradient(
+    -90deg,
+    #045777 10%,
+    #005f73 20%,
+    #0a9396 30%,
+    #546519 40%,
+    #d3a826 50%,
+    #ee9b00 60%,
+    #ca6702 70%,
+    #bb3e03 80%,
+    #ae2012 90%,
+    #621315 100%
+  )  !important ;
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+      font-size: 2vw;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+.slide-in-blurred-bottom {
+	-webkit-animation: slide-in-blurred-bottom 1s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+	        animation: slide-in-blurred-bottom 1s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+}
+
+ @-webkit-keyframes slide-in-blurred-bottom {
+  0% {
+    -webkit-transform: translateY(1000px) scaleY(2.5) scaleX(0.2);
+            transform: translateY(1000px) scaleY(2.5) scaleX(0.2);
+    -webkit-transform-origin: 50% 100%;
+            transform-origin: 50% 100%;
+    -webkit-filter: blur(80px);
+            filter: blur(80px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0) scaleY(1) scaleX(1);
+            transform: translateY(0) scaleY(1) scaleX(1);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-blurred-bottom {
+  0% {
+    -webkit-transform: translateY(1000px) scaleY(2.5) scaleX(0.2);
+            transform: translateY(1000px) scaleY(2.5) scaleX(0.2);
+    -webkit-transform-origin: 50% 100%;
+            transform-origin: 50% 100%;
+    -webkit-filter: blur(80px);
+            filter: blur(80px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0) scaleY(1) scaleX(1);
+            transform: translateY(0) scaleY(1) scaleX(1);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    opacity: 1;
+  }
+}
+
+
+.nirdesh-heading{
+  font-size: 12vw;
+  font-weight: 500;
+  stroke-dasharray: 3200;
+  stroke-dashoffset: 1000;
+}

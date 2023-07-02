@@ -1,96 +1,84 @@
-// // Get all the div elements with id "nirdesh-writing"
-// const divElements = document.querySelectorAll("#nirdesh-writing-x");
-
-// let totalAnimationDuration = 0;
-
-// // Loop through each div element and add the classes
-// divElements.forEach((divElement, index) => {
-//   divElement.classList.add("line-1", "anim-typewriter");
-
-//   // Calculate the animation delay based on the total duration
-//   const animationDelay = totalAnimationDuration / 5; // Convert to seconds
-//   divElement.style.animationDelay = `${animationDelay}s`;
-
-//   // Calculate the total duration by adding the animation durations and delays
-//   const animationDuration = parseFloat(getComputedStyle(divElement).animationDuration) * 5; // Convert to milliseconds
-//   const animationDelayMilliseconds = parseFloat(getComputedStyle(divElement).animationDelay); // Convert to milliseconds
-//   totalAnimationDuration += animationDuration + animationDelayMilliseconds;
-// });
+particlesJS("particles-js", particleConfig);
 
 const linesOfCode = [
   'package org.rkmvcc.nirdesh',
-  'public class Nirdesh {',
-  '    public static void main(String[] args) {',
+  'public class <span class="text-gray-200">Nirdesh {</span>',
+  '    public static void <span class="text-blue-500">main</span><span class="text-gray-200">(</span>String<span class="text-gray-200">[] args) {</span>',
   '       //Get Started for the most enthusiastic coding competition',
-  '       //Initiating Nirdesh'
+  '       //Initiating Nirdesh',
+  '       <span class="text-yellow-700">String</span> organiser =  <span class="text-green-700">"Ramakrishna Mission Vivekananda Centenary College"</span>;',
+  '       <span class="text-yellow-700">System</span>.out.println(<span class="text-green-700">"Organised by \n"</span> + organiser);'
 ];
 
 // Loop through each line of code
 linesOfCode.forEach((line, index) => {
   const elementId = `initial-code-${index + 1}`;
   const element = document.getElementById(elementId);
-
   // Create a new typewriter instance for each line of code element
-  const typewriter = new Typewriter(element, {
-    loop: false,
-    delay: 0,
-  });
 
-  if(index==0){
-    typewriter
-      .typeString(line)
-      .pauseFor(1000)
-      .callFunction(() => {
-        setTimeout(() => {
-          typewriter.pause();
-          const caretElement = element.querySelector('.Typewriter__cursor');
-          caretElement.style.display = 'none';
-          console.log('Animation stopped');
-        }, 0);
-      }, typewriter) // Pass the typewriter instance as the thisArg parameter
-      .start();
-  } else {
-  typewriter
-    .pauseFor(1000 * index)
-    .typeString(line)
-    .pauseFor(1000)
-    .callFunction(() => {
-      setTimeout(() => {
-        typewriter.pause();
-        const caretElement = element.querySelector('.Typewriter__cursor');
-        caretElement.style.display = 'none';
-        console.log('Animation stopped');
-      }, 0);
-    }, typewriter) // Pass the typewriter instance as the thisArg parameter
-    .start();
-  }
+  setTimeout(()=> {
+    const typewriter = new Typewriter(element, {
+      loop: false,
+      delay: 0,
+    });
+
+    if(index==0){
+      typewriter
+        .typeString(line)
+        .pauseFor(1500)
+        .callFunction(() => {
+          setTimeout(() => {
+            typewriter.pause();
+            const caretElement = element.querySelector('.Typewriter__cursor');
+            caretElement.style.display = 'none';
+          }, 0);
+        }, typewriter) // Pass the typewriter instance as the thisArg parameter
+        .start();
+    } else if(index<5) {
+      setTimeout(() => typewriter
+        .typeString(line)
+        .pauseFor(500)
+        .callFunction(() => {
+          setTimeout(() => {
+            typewriter.pause();
+            const caretElement = element.querySelector('.Typewriter__cursor');
+            caretElement.style.display = 'none';
+          }, 0);
+        }, typewriter) // Pass the typewriter instance as the thisArg parameter
+        .start(), 500);
+        
+    } else {
+      setTimeout(() => typewriter
+        .typeString(line)
+        .pauseFor(500)
+        .callFunction(() => {
+          setTimeout(() => {
+            typewriter.pause();
+            const caretElement = element.querySelector('.Typewriter__cursor');
+            caretElement.style.display = 'none';
+          }, 0);
+        }, typewriter) // Pass the typewriter instance as the thisArg parameter
+        .start(), 2000);
+    }
+  }, (1000 * index)+1000);
+  
+
+  
 });
 
-// const linesOfCode = [
-//   'package org.rkmvcc.nirdesh',
-//   'public class Nirdesh {',
-//   '    public static void main(String[] args) {',
-//   '       //Get Started for the most enthusiastic coding competition',
-//   '       //Initiating Nirdesh'
-// ];
-
-// linesOfCode.forEach((line, index) => {
-//   const elementId = `initial-code-${index + 1}`;
-//   const codeElement = document.getElementById(elementId).querySelector('.code-line');
-//   const caretElement = document.getElementById(elementId).querySelector('.caret');
-
-//   const typewriter = new Typewriter(codeElement, {
-//     loop: false,
-//     delay: 0,
-//     onComplete: typewriter.stop() // Stop the animation after 2 seconds
-//   });
-
-//   typewriter
-//     .pauseFor(1000 * index)
-//     .typeString(line)
-//     .pauseFor(1000)
-//     .start();
-
-// });
-
+const nirdeshWriting = document.querySelector('#nirdesh-writing');
+const oneLiner1 = document.querySelector('#one-liner-1');
+const oneLiner2 = document.querySelector('#one-liner-2');
+setTimeout(() => {
+  nirdeshWriting.classList.remove("hidden");
+  nirdeshWriting.classList.add('tracking-in-expand');
+}, 6000);
+setTimeout(() => {
+  oneLiner1.classList.remove("hidden");
+  oneLiner1.classList.add("fade-in");
+}, 7000);
+setTimeout(() => {
+  oneLiner2.classList.remove("hidden");
+  oneLiner2.classList.add("fade-in")
+}, 9500);
 

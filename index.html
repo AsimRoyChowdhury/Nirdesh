@@ -4,37 +4,58 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="./css/main.css">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="./css/libraries/prism.css"/>
+  <link rel="stylesheet" href="./css/main.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=JetBrains+Mono&display=swap"
     rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+    </style>
 </head>
 
-<body>
-  <div class="w-full mt-10 items-center justify-center">
-    <div class="mx-auto" style="width: 75vw;">
-      <div class="flex-col w-full h-full py-8 items-center justify-center backdrop-blur-lg border-4 border-blue-400 shadow-blue-400 rounded-2xl">
+<body class="bg-gray-900">
+  <div id="particles-js">
+  <div  class="absolute z-0 w-full mt-10 items-center justify-center">
+    <div class="slide-in-blurred-bottom mx-auto" style="width: 90vw;">
+      <div class=" flex-col w-full h-full pb-1 sm:pb-6 items-center justify-center  border-4 bg-slate-700 bg-opacity-90  border-blue-400 shadow-blue-400 rounded-2xl">
+        <div class="w-full mb-10 justify-between flex h-auto bg-gray-600 rounded-t-xl">
+          <div class="flex">
+<svg style="width: 1.2vw; margin: 1vw" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="26" cy="26" r="26" fill="#FF4747"/>
+  </svg>
+<svg style="width: 1.2vw; margin-right: 1vw" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="26" cy="26" r="26" fill="#FFCC47"/>
+  </svg>
+<svg style="width: 1.2vw" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="26" cy="26" r="26" fill="#47FF5A"/>
+  </svg>
+</div>
+<div class="text-gray-400" style="font-size: 1vw; margin: 1vw; font-family: 'Open Sans';">rkmvcc/terminal/cc</div>
+<div class="text-gray-400 opacity-30" style="font-size: 0.8vw; margin: 1vw; font-family: 'Open Sans';">xx/08/23</div>
+</div>
+        <div id="initial-code-1" class="sm:mb-2  text-indigo-500"
+          style="font-size: 1vw; margin-left: 12vw; width: 17em; font-family: 'JetBrains Mono', monospace;"></span></div>
+        <div id="initial-code-2" class="sm:my-2  text-indigo-500"
+          style="font-size: 1vw; margin-left: 16vw; width: 16em; font-family: 'JetBrains Mono', monospace;"></span></div>
+        <div id="initial-code-3" class="sm:my-2  text-indigo-500"
+          style="font-size: 1vw; margin-left: 20vw; width: 26em; font-family: 'JetBrains Mono', monospace;"></span></div>
+        <div id="initial-code-4" class="sm:my-2  text-green-600"
+          style="font-size: 1vw; margin-left: 20vw; width: 50em; font-family: 'JetBrains Mono', monospace;"></span></div>
+        <div id="initial-code-5" class="sm:my-2  text-green-600"
+          style="font-size: 1vw; margin-left: 20vw; width: 20em; font-family: 'JetBrains Mono', monospace;"></span></div>
 
-        <div id="initial-code-1" class="ml-60 mb-2  text-indigo-500"
-          style="font-size: 1vw; width: 17em; font-family: 'JetBrains Mono', monospace;"></span></div>
-        <div id="initial-code-2" class="ml-60 my-2  text-indigo-500"
-          style="font-size: 1vw; width: 16em; font-family: 'JetBrains Mono', monospace;"></span></div>
-        <div id="initial-code-3" class="ml-72 my-2  text-blue-500"
-          style="font-size: 1vw; width: 26em; font-family: 'JetBrains Mono', monospace;"></span></div>
-        <div id="initial-code-4" class="ml-72 my-2  text-green-600"
-          style="font-size: 1vw; width: 50em; font-family: 'JetBrains Mono', monospace;"></span></div>
-        <div id="initial-code-5" class="ml-72 my-2  text-green-600"
-          style="font-size: 1vw; width: 20em; font-family: 'JetBrains Mono', monospace;"></span></div>
-
-        <div class="flex mb-8 w-full h-full items-center justify-center">
-          <svg class="tracking-in-contract" style="width: 5vw" viewBox="0 0 234 668" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div id="nirdesh-writing" class="hidden flex mb-2 w-full h-full items-center justify-center">
+          <svg style="width: 5vw" viewBox="0 0 234 668" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M200 34H166.667C148.986 34 132.029 41.0238 119.526 53.5262C107.024 66.0286 100 82.9856 100 100.667V267.333C100 285.014 92.9764 301.971 80.4739 314.474C67.9715 326.976 51.0146 334 33.3335 334C51.0146 334 67.9715 341.024 80.4739 353.526C92.9764 366.029 100 382.986 100 400.667V567.333C100 585.014 107.024 601.971 119.526 614.474C132.029 626.976 148.986 634 166.667 634H200" stroke="#009DB3" stroke-width="40" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
-          <span id="nirdesh-writing"
-            class="tracking-in-expand nirdesh-heading text-transparent bg-clip-text bg-gradient-to-b from-pink-600 to-orange-500"
+          <span 
+            class="nirdesh-heading text-transparent bg-clip-text bg-gradient-to-b from-pink-600 to-orange-500"
             style="font-family: 'Plutur';">NIRDESH</span>
           <svg class="tracking-in-contract" style="width: 5vw" viewBox="0 0 234 668" fill="none"
             xmlns="http://www.w3.org/2000/svg">
@@ -43,18 +64,31 @@
               stroke="#009DB3" stroke-width="40" stroke-linecap="round" stroke-linejoin="round" />
           </svg>
         </div>
-        <div class="w-full justify-center items-center">
-          <div class="bg-white w-fit text-center">
-            <span
-              class="tracking-in-expand mb-10 text-2xl text-transparent bg-clip-text bg-gradient-to-b from-pink-600 to-orange-500"
-              style="font-family: 'Josefin';">Unlock the Coding Cosmos and Ignite Your Intellect at Nirdesh: RKMVCC's Spectacular Tech Fiesta!</span>
+        <div  id="one-liner-1" class="hidden w-full flex justify-center my-2 items-center">
+          <div class="bg-white w-fit text-center border-4 border-x-blue-700 border-y-orange-500 rounded-xl px-2 sm:py-1">
+            <div
+              class=" text-transparent bg-clip-text bg-gradient-to-b from-red-600 to-blue-500"
+              style="font-size: 1.5vw; font-family: 'Josefin Sans'">Unlock the Coding Cosmos and Ignite Your Intellect at Nirdesh: RKMVCC's Spectacular Tech Fiesta!</div>
+          </div>
+        </div>
+        <div id="initial-code-6" class="sm:my-2  text-gray-200"
+          style="font-size: 1vw; margin-left: 20vw; width: 60em; font-family: 'JetBrains Mono', monospace;"></span></div>
+        <div id="initial-code-7" class="sm:my-2  text-gray-200"
+          style="font-size: 1vw; margin-left: 20vw; width: 40em; font-family: 'JetBrains Mono', monospace;"></span></div>
+        <div id="one-liner-2" class="hidden w-full flex justify-center my-2 sm:mt-4 items-center">
+          <div class="bg-white w-fit text-center border-4 border-x-blue-700 border-y-orange-500 rounded-xl px-2 sm:py-1">
+            <div
+              class="text-transparent bg-clip-text bg-gradient-to-b from-red-600 to-blue-500"
+              style="font-size: 1.5vw; font-family: 'Josefin Sans';">Organised by <br> <div class="animate-charcter">Ramakrishna Mission Vivekananda Centenary College</div></div>
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>
   <script defer src="./js/libraries/prism.js"></script>
   <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+  <script src="./js/libraries/particle.js"></script>
   <script src="./js/script.js"></script>
 </body>
 </html>
