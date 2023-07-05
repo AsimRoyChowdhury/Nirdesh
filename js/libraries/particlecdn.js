@@ -954,7 +954,7 @@ function hexToRgb(e) {
             "string" != typeof e && ((a = e), (e = "particles-js")),
               e || (e = "particles-js");
             var t = document.getElementById(e),
-              i = "particles-js-canvas-el sayan",
+              i = "particles-js-canvas-el",
               s = t.getElementsByClassName(i);
             if (s.length) for (; s.length > 0; ) t.removeChild(s[0]);
             var n = document.createElement("canvas");
