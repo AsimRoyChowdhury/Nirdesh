@@ -4,35 +4,32 @@
 
 @font-face {
   font-family: 'Plutur';
-  src: url('./assets/Plutur.ttf')  format('truetype');
-  src: url('./assets/Plutur.otf')  format('opentype'),
+  src: url('../assets/Plutur.ttf')  format('truetype');
+  src: url('../assets/Plutur.otf')  format('opentype'),
 }
 
 @font-face {
   font-family: 'nusar';
-  src: url('./assets/NUSAR/NUSAR.ttf')  format('truetype');
-  src: url('./assets/NUSAR/NUSAR.otf')  format('opentype'),
+  src: url('../assets/NUSAR/NUSAR.ttf')  format('truetype');
+  src: url('../assets/NUSAR/NUSAR.otf')  format('opentype'),
 }
 
 
-body::before {
+html, body {
+  height: 100%;
+}
+
+
+#particles-js::before{
   content: "";
-  position: fixed;
-  inset: 0;
-}
-
-#particles-js {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+  inset: 0;
   height: 100%;
   z-index: -100;
 }
 
 
 .line-1{
-  position: relative;
   top: 50%;
   border-right: 2px solid rgba(255,255,255,.75);
   font-size: 180%;
@@ -130,7 +127,7 @@ animation: typewriter 1s steps(27) 1s 1 normal both,
   text-transform: uppercase;
   font-weight: 600;
   background-image: linear-gradient(
-    -90deg,
+    90deg,
     #045777 10%,
     #005f73 20%,
     #0a9396 30%,
@@ -141,7 +138,7 @@ animation: typewriter 1s steps(27) 1s 1 normal both,
     #bb3e03 80%,
     #ae2012 90%,
     #621315 100%
-  )  !important ;
+  );
   background-size: auto auto;
   background-clip: border-box;
   background-size: 200% auto;
@@ -208,8 +205,74 @@ animation: typewriter 1s steps(27) 1s 1 normal both,
 
 
 .nirdesh-heading{
-  font-size: 12vw;
+  font-size: 9vh;
   font-weight: 500;
   stroke-dasharray: 3200;
   stroke-dashoffset: 1000;
+}
+
+.brackets{
+  width: 8vw;
+}
+
+.code-text{
+  font-size: 0.8rem
+}
+
+.terminal-code-text{
+  font-size: 0.6rem
+}
+
+#initial-code-1{
+  margin-left: 6vw;
+}
+#initial-code-2{
+  margin-left: 10vw;
+}
+#initial-code-3,
+#initial-code-4,
+#initial-code-5,
+#initial-code-6,
+#initial-code-7{
+  margin-left: 14vw;
+}
+
+.administrator-text{
+  font-size: 0.5rem;
+}
+@media (min-width: 500px) {
+  .nirdesh-heading{
+    font-size: 15vw;
+  }
+  .code-text{
+    font-size: 1rem
+  }
+}
+
+@media (min-width: 769px) {
+  .code-text{
+    font-size: 1.2rem
+  }
+  .brackets{
+    width: 6vw;
+  }
+  #initial-code-1{
+    margin-left: 12vw;
+  }
+  #initial-code-2{
+    margin-left: 17vw;
+  }
+  #initial-code-3,
+  #initial-code-4,
+  #initial-code-5,
+  #initial-code-6,
+  #initial-code-7{
+    margin-left: 22vw;
+  }
+  .terminal-code-text{
+    font-size: 1rem
+  }
+  .administrator-text{
+    font-size: 1rem;
+  }
 }

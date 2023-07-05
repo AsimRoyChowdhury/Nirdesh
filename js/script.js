@@ -7,7 +7,7 @@ const linesOfCode = [
   '       //Get Started for the most enthusiastic coding competition',
   '       //Initiating Nirdesh',
   '       <span class="text-yellow-700">String</span> organiser =  <span class="text-green-700">"Ramakrishna Mission Vivekananda Centenary College"</span>;',
-  '       <span class="text-yellow-700">System</span>.out.println(<span class="text-green-700">"Organised by \n"</span> + organiser);'
+  '       <span class="text-yellow-700">System</span>.out.println(<span class="text-green-700">"Organised by \\n"</span> + organiser);'
 ];
 
 // Loop through each line of code
@@ -50,7 +50,7 @@ linesOfCode.forEach((line, index) => {
     } else {
       setTimeout(() => typewriter
         .typeString(line)
-        .pauseFor(500)
+        .pauseFor(1000)
         .callFunction(() => {
           setTimeout(() => {
             typewriter.pause();
@@ -58,7 +58,7 @@ linesOfCode.forEach((line, index) => {
             caretElement.style.display = 'none';
           }, 0);
         }, typewriter) // Pass the typewriter instance as the thisArg parameter
-        .start(), 2000);
+        .start(), 1000);
     }
   }, (1000 * index)+1000);
   
