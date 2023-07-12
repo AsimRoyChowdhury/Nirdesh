@@ -1,3 +1,5 @@
+
+
 particlesJS("particles-js", particleConfig);
 
 const linesOfCode = [
@@ -14,6 +16,7 @@ const linesOfCode = [
 linesOfCode.forEach((line, index) => {
   const elementId = `initial-code-${index + 1}`;
   const element = document.getElementById(elementId);
+  
   // Create a new typewriter instance for each line of code element
 
   setTimeout(()=> {
@@ -57,28 +60,75 @@ linesOfCode.forEach((line, index) => {
             const caretElement = element.querySelector('.Typewriter__cursor');
             caretElement.style.display = 'none';
           }, 0);
+          element.scrollIntoView({ behavior: 'smooth' });
         }, typewriter) // Pass the typewriter instance as the thisArg parameter
         .start(), 1000);
     }
   }, (1000 * index)+1000);
   
-
   
 });
 
+// const image = document.querySelector('#image');
+// const blurThreshold = 500; // Adjust this value to control the blur intensity
+
+// window.addEventListener('scroll', () => {
+//   // Calculate the blur value based on the scroll position
+//   const scrollPosition = window.scrollY;
+//   const blurValue = Math.min(scrollPosition / blurThreshold, 1);
+  
+//   // Apply the blur value to the div
+//   image.style.filter = `blur(${blurValue}px)`;
+// });
 const nirdeshWriting = document.querySelector('#nirdesh-writing');
 const oneLiner1 = document.querySelector('#one-liner-1');
 const oneLiner2 = document.querySelector('#one-liner-2');
-setTimeout(() => {
-  nirdeshWriting.classList.remove("hidden");
-  nirdeshWriting.classList.add('tracking-in-expand');
-}, 6000);
-setTimeout(() => {
-  oneLiner1.classList.remove("hidden");
-  oneLiner1.classList.add("fade-in");
-}, 7000);
-setTimeout(() => {
-  oneLiner2.classList.remove("hidden");
-  oneLiner2.classList.add("fade-in")
-}, 9500);
+const mainSection = document.querySelector('#main-section');
 
+const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+
+delay(6000)
+  .then(() => {
+    nirdeshWriting.classList.remove("hidden");
+    nirdeshWriting.classList.add("tracking-in-expand");
+    nirdeshWriting.scrollIntoView({ behavior: 'smooth' });
+    return delay(1000);
+  })
+  .then(() => {
+    oneLiner1.classList.remove("hidden");
+    oneLiner1.classList.add("fade-in");
+    oneLiner2.scrollIntoView({ behavior: 'smooth' })
+    return delay(2500);
+  })
+  .then(() => {
+    oneLiner2.classList.remove("hidden");
+    oneLiner2.classList.add("fade-in");
+    oneLiner2.scrollIntoView({ behavior: 'smooth' })
+    return delay(1000);
+  })
+  .then(() => {
+    mainSection.classList.remove("hidden");
+    mainSection.classList.add("fade-in");
+    mainSection.scrollIntoView({ behavior: 'smooth' })
+  });
+
+  window.addEventListener('scroll', function() {
+    let image = document.getElementById('image');
+    let num = (-image.getBoundingClientRect().y)/50;
+    let offset = image.getBoundingClientRect().top;
+    let blur = 0;
+    
+    console.log(num);
+    if (offset <= 0) {
+      blur = num;
+    } else {
+      blur = 0;
+    }
+  
+    image.style.filter = 'blur(' + blur + 'px)';
+  });
+  
+  
+  
+
+var rellax = new Rellax('.rellax');
