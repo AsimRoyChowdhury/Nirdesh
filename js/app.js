@@ -1,6 +1,5 @@
 
-
-particlesJS("particles-js", particleConfig);
+// import { particlesJS } from 'https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js';
 
 const linesOfCode = [
   'package org.rkmvcc.nirdesh',
@@ -118,7 +117,6 @@ delay(6000)
     let offset = image.getBoundingClientRect().top;
     let blur = 0;
     
-    console.log(num);
     if (offset <= 0) {
       blur = num;
     } else {
