@@ -15,11 +15,6 @@
 }
 
 
-html, body {
-  height: 100%;
-}
-
-
 #particles-js {
   height: 100%;
   width: 100%;
@@ -211,7 +206,23 @@ animation: typewriter 1s steps(27) 1s 1 normal both,
 .about-us{
   font-size: 5vh;
   font-weight: 500;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  bottom: 0;
+  margin: auto 0;
 }
+
+.about-us-para{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  bottom: 0;
+  margin: auto 0;
+}
+
 .brackets{
   width: 8vw;
 }
@@ -224,17 +235,13 @@ animation: typewriter 1s steps(27) 1s 1 normal both,
   font-size: 0.6rem
 }
 
-#initial-code-1{
+#initial-code-1, #initial-code-2, #initial-code-9{
   margin-left: 6vw;
 }
-#initial-code-2{
+#initial-code-3, #initial-code-8{
   margin-left: 10vw;
 }
-#initial-code-3,
-#initial-code-4,
-#initial-code-5,
-#initial-code-6,
-#initial-code-7{
+#initial-code-4, #initial-code-5, #initial-code-6, #initial-code-7{
   margin-left: 14vw;
 }
 
@@ -242,18 +249,12 @@ animation: typewriter 1s steps(27) 1s 1 normal both,
   font-size: 0.5rem;
 }
 
-/* .about-us-img{
-  background-image: url(../assets/college_about_us_image.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-color: lightgray;
-  filter: brightness(50%);
-  border-radius: 1rem;
-  background-blend-mode: luminosity;
-  box-shadow: 0px 19px 102px -45px rgba(0, 0, 0, 0.53);
-  height: 100px;
-  width: auto;
-} */
+.fixed {
+  position: fixed !important;
+  top: 0;
+  transform: translateY(0);
+}
+
 
 
 @media (min-width: 500px) {
@@ -276,17 +277,13 @@ animation: typewriter 1s steps(27) 1s 1 normal both,
   .brackets{
     width: 6vw;
   }
-  #initial-code-1{
+  #initial-code-1, #initial-code-2, #initial-code-9{
     margin-left: 12vw;
   }
-  #initial-code-2{
+  #initial-code-3, #initial-code-8{
     margin-left: 17vw;
   }
-  #initial-code-3,
-  #initial-code-4,
-  #initial-code-5,
-  #initial-code-6,
-  #initial-code-7{
+  #initial-code-4, #initial-code-5, #initial-code-6, #initial-code-7{
     margin-left: 22vw;
   }
   .terminal-code-text{
