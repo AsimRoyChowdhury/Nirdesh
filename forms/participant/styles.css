@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.hero-img{
+    background: url(../../assets/about_us_bg.jpg);
+    width: 100%;
+    height: 30vh;
+    background-size: cover;
+}
+
+@media (min-width: 768px) {
+    .hero-img{
+        width: 50%;
+    }
+}
+
+
+#firstName:focus + label {
+    color: rgb(239 68 68 );;
+}
