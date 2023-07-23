@@ -1,3 +1,5 @@
+// import Swiper from 'swiper';
+
 particlesJS("particles-js", particleConfig);
 
 const linesOfCode = [
@@ -82,7 +84,7 @@ linesOfCode.forEach((line, index) => {
 const nirdeshWriting = document.querySelector('#nirdesh-writing');
 const oneLiner1 = document.querySelector('#one-liner-1');
 const oneLiner2 = document.querySelector('#one-liner-2');
-const mainSection = document.querySelector('#main-section');
+const mainSection = document.querySelector('#fixed-div');
 
 const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
@@ -109,15 +111,18 @@ delay(6000)
     mainSection.classList.remove("hidden");
     mainSection.classList.add("fade-in");
     mainSection.scrollIntoView({ behavior: 'smooth' });
-    document.body.style.height = '1000vh';
+    document.body.style.height = '800vh';
   });
   
 window.addEventListener('scroll', function() {
-  let fixedDiv = document.getElementById('main-section');
+  let fixedDiv = document.getElementById('fixed-div');
   let heroSection = document.getElementById('hero-section');
   let aboutUs = document.getElementById('about-us');
   let image = document.getElementById('image');
   let aboutUsPara = document.getElementById('about-us-para');
+  let aboutUsSection = document.getElementById('about-us-section');
+  let timeline = document.getElementById('timeline');
+  let codingImage = document.getElementById('coding-image');
   const mediaQuerySmall = window.matchMedia("screen and (max-width: 700px)");
   const mediaQueryMedium = window.matchMedia("screen and (min-width: 700px) and (max-width: 800px)");
   let blur = 0;
@@ -200,7 +205,6 @@ window.addEventListener('scroll', function() {
       }
     } else {                                              //Executes when the screen width is more than 800px
       blur = (blur / 4) - 1.5;                            //Adjustifying the blur number because of the bigger screen which is why bigger scroll value is required
-      console.log(blur);
       if(blur < 4){
         aboutUs.style.opacity = blur/4;
         aboutUs.style.transform = "translateY(" + - (blur * 3) + "vh)";
@@ -216,31 +220,39 @@ window.addEventListener('scroll', function() {
 
         aboutUsPara.classList.remove("hidden");
         aboutUs.classList.remove("hidden");
-      } else if (blur > 8 && blur <= 10) {
-        aboutUs.style.opacity = 10/(blur);
+      } else if (blur > 8 && blur <= 12) {
+        aboutUsSection.classList.remove('hidden');
+        timeline.classList.add('hidden');
+
+        aboutUs.style.opacity = 1/(blur - 7);
         aboutUs.style.transform = "translateY(" + - (blur - 4) * 3 + "vh)";
         aboutUs.style.transitionTimingFunction = "ease-in-out";
         aboutUs.style.transition = "all";
 
-        aboutUsPara.style.opacity = 10/(blur);
+        aboutUsPara.style.opacity = 1/(blur - 7);
         aboutUsPara.style.transform = "translateY(" + (blur - 4) * 3 + "vh)";
         aboutUsPara.style.transitionTimingFunction = "ease-in-out";
         aboutUsPara.style.transition = "all";
 
+        aboutUsSection.style.opacity = 1/(blur - 7);
+
         aboutUs.classList.remove("hidden");
         aboutUsPara.classList.remove("hidden");
-      } else if (blur > 10) {
+      } else if (blur > 12) {
+        timeline.classList.remove('hidden');
+        aboutUsSection.classList.add('hidden');
+        
+        timeline.style.opacity = (blur-12)/2 ;
+        codingImage.style.opacity = Math.min((blur-12)/2, 0.5) ;
+        
+        
         aboutUs.classList.add("hidden");
         aboutUsPara.classList.add("hidden");
-      } else {
-        aboutUs.classList.remove('hidden');
-        aboutUsPara.classList.remove('hidden');
-      }
+      } 
     }
   } else if (heroSection.getBoundingClientRect().bottom >= 0) {
     fixedDiv.classList.remove('fixed');
     aboutUsPara.classList.add("hidden");
-    aboutUs.classList.add("hidden");
   }
 
 });

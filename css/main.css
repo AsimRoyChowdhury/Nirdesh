@@ -255,6 +255,18 @@ animation: typewriter 1s steps(27) 1s 1 normal both,
   transform: translateY(0);
 }
 
+#coding-blueprint-heading{
+  font-weight: 700;
+  font-family: 'Plutur';
+  font-size: 50px;
+}
+
+#coding-blueprint-sub-heading{
+  font-weight: 700;
+  text-shadow: 2px 2px 2px #e58805;
+  font-family: "Open Sans";
+  font-size: 20px;
+}
 
 
 @media (min-width: 500px) {
@@ -291,5 +303,18 @@ animation: typewriter 1s steps(27) 1s 1 normal both,
   }
   .administrator-text{
     font-size: 1rem;
+  }
+
+  #coding-blueprint-heading{
+    font-weight: 700;
+    font-family: 'Plutur';
+    font-size: 50px;
+  }
+
+  #coding-blueprint-sub-heading{
+    font-weight: 700;
+    text-shadow: 2px 2px 2px #e58805;
+    font-family: "Open Sans";
+    font-size: 20px;
   }
 }
