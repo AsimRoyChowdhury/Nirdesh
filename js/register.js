@@ -1,0 +1,1 @@
+particlesJS("particles-js", particleConfig);

@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.expand-wrapper{
+          display: grid;
+          grid-template-rows: 0fr;
+          width: 100%;
+          overflow: hidden;
+}
+
+.expand{
+          min-width: 0;
+}
+
+.input{
+          @apply w-[90%] px-4 py-4 mt-5 lg:mt-10 rounded-xl bg-clip-padding backdrop-filter backdrop-blur-[4px] text-amber-600 text-[1.4rem] leading-[1rem] lg:text-4xl transition-all duration-500 group font-bold border border-indigo-300 focus-within:text-yellow-600 focus-within:text-lg lg:focus-within:text-3xl focus-within:ring-2 focus-within:ring-indigo-600 focus-within:bg-gray-800 focus-within:border-indigo-400
+}
