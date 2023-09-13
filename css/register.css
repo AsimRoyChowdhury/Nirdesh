@@ -2,17 +2,63 @@
 @tailwind components;
 @tailwind utilities;
 
-.expand-wrapper{
-          display: grid;
-          grid-template-rows: 0fr;
-          width: 100%;
-          overflow: hidden;
+*::-webkit-scrollbar {
+  display: none;
+}
+        
+* {
+  -ms-overflow-style: none; 
+  scrollbar-width: none;  
 }
 
-.expand{
-          min-width: 0;
+.blurred{
+  -webkit-animation: blur 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+          animation: blur 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 
-.input{
-          @apply w-[90%] px-4 py-4 mt-5 lg:mt-10 rounded-xl bg-clip-padding backdrop-filter backdrop-blur-[4px] text-amber-600 text-[1.4rem] leading-[1rem] lg:text-4xl transition-all duration-500 group font-bold border border-indigo-300 focus-within:text-yellow-600 focus-within:text-lg lg:focus-within:text-3xl focus-within:ring-2 focus-within:ring-indigo-600 focus-within:bg-gray-800 focus-within:border-indigo-400
+@-webkit-keyframes blur {
+  0% {
+    -webkit-backdrop-filter: blur(0px);
+            backdrop-filter: blur(0px);
+  }
+  100% {
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+  }
+}
+@keyframes blur {
+  0% {
+    -webkit-backdrop-filter: blur(0px);
+            backdrop-filter: blur(0px);
+  }
+  100% {
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+  }
+}
+
+.scale-up-center {
+	-webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+        
+@-webkit-keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
 }
