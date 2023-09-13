@@ -2,6 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+@font-face {
+  font-family: 'anurati';
+  src: url('../assets/Anurati.otf')  format('truetype');
+}
+
 @font-face {
   font-family: 'Plutur';
   src: url('../assets/Plutur.ttf')  format('truetype');
