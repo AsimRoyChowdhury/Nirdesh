@@ -17,7 +17,7 @@
       @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
     </style>
 
-  <script src="../js/tailwindcss.js"></script>
+  <script src="../js/libraries/tailwindcss.js"></script>
   <script src="../js/libraries/particlecdn.js"></script>
   <script defer src="../js/libraries/prism.js"></script>
   <script src="../js/libraries/particle.js"></script>
@@ -265,11 +265,15 @@
     >
       <div class="w-full max-w-screen-2xl mx-auto p-4 md:py-8">
         <div class="sm:flex sm:items-center sm:justify-between">
-          <a href="#" class="w-fit flex flex-col items-center mb-4 mx-auto sm:mx-2 sm:mb-0 hover:scale-105 transition-all duration-200">
+          <a href="#" class="w-fit flex flex-col items-center mb-4 mx-auto sm:mx-2 sm:mb-0 group hover:scale-105 transition-all duration-200">
 						<span
-							class="self-center font-[anurati] text-2xl sm:text-4xl tracking-widest font-semibold whitespace-nowrap text-white hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-b hover:from-pink-600 hover:to-pink-400 transition-all duration-200 uppercase"
+							class="self-center font-[anurati] text-2xl sm:text-4xl tracking-widest font-semibold whitespace-nowrap text-white group-hover:text-pink-600 transition-all duration-200 uppercase"
 							>Eureka</span
 						>
+            <span
+										class="self-center font-[Open Sans] text-xs sm:text-sm whitespace-nowrap text-white group-hover:text-pink-400 transition-all duration-200"
+										>Mystery Solving Contest</span
+									>
           </a>
           <ul
             class="flex justify-center gap-5 flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400"
