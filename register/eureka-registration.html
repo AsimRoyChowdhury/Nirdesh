@@ -1,231 +1,189 @@
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nirdesh - Registration</title>
-    <link rel="stylesheet" href="../css/libraries/prism.css" />
-    <link rel="stylesheet" href="../css/main.css" />
-    <link rel="stylesheet" href="../css/eureka-registration.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=JetBrains+Mono&display=swap"
-      rel="stylesheet"
-    />
 
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
-    </style>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nirdesh - Registration</title>
+  <link rel="stylesheet" href="../css/libraries/prism.css" />
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="../css/eureka-registration.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=JetBrains+Mono&display=swap"
+    rel="stylesheet" />
+
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+  </style>
 
   <script src="../js/libraries/tailwindcss.js"></script>
   <script src="../js/libraries/particlecdn.js"></script>
   <script defer src="../js/libraries/prism.js"></script>
   <script src="../js/libraries/particle.js"></script>
-  </head>
-  <body class="bg-gray-800">
-    <div id="particles-js"></div>
-    <div id="notice-modal" class="blurred-in flex z-10 w-full h-screen fixed ">
-      <div class="scale-up-center flex flex-col max-h-[30rem] bg-gray-300 mx-auto my-auto w-[75%] sm:w-[50%] rounded-xl py-4 px-8 overflow-y-auto">
-        <div class="w-full text-center font-[Plutur] md:text-6xl sm:text-4xl text-2xl tracking-widest font-extrabold text-slate-600 my-2">Eurekites' Manual</div>
-        <div class=" mb-6 text-red-800 text-sm md:text-lg">
-          <ul>
-            <li>&#8226; Be respectful and considerate of fellow participants, organizers, judges, and spectators.</li>
-            <li>&#8226; Do not cheat, plagiarize, or engage in any form of academic dishonesty. Code submissions should be your original work.</li>
-            <li>&#8226; Do not collaborate with others unless explicitly allowed by the competition rules.</li>
-            <li>&#8226; Do not engage in unsportsmanlike conduct, including taunting, boasting, or disrupting other participants.</li>
-            <li>&#8226; Encourage a positive and supportive atmosphere.</li>
-            <li>&#8226; Adhere to a strong code of ethics when solving problems and writing code.</li>
-            <li>&#8226; Prioritize correctness, efficiency, and elegance in your solutions.</li>
-            <li>&#8226; Do not engage in harmful activities, such as hacking, cracking, or any form of malicious coding.</li>
-            <li>&#8226; Adhere to the competition schedule, including start times, submission deadlines, and breaks.</li>
-            <li>&#8226; Late submissions may not be accepted, so be punctual.</li>
-            <li>&#8226; Do not attempt to manipulate or disrupt the competition platform.</li>
-            <li>&#8226; Understand that violations of the code of conduct may result in penalties, disqualification, or other consequences, as determined by the organizers.</li>
-            <li>&#8226; The decisions of the competition organizers and judges are final. Respect their rulings and decisions.</li>
-            </ul>
-          </ul>
-        </div>
-        <button id="model-confirm" onclick="hideModal()" class="bg-indigo-300 w-fit mx-auto px-4 text-sm md:text-lg rounded-full py-1 border border-indigo-700 text-indigo-700 hover:text-indigo-300 hover:bg-indigo-700 hover:border-indigo-700 transition-all duration-200 ">I have read the manual</button>
-      </div>
-    </div>
-    <div id="upi-modal" class="blurred-in flex z-10 w-full h-screen fixed hidden">
-      <div class="upi-qr scale-up-center flex flex-col h-fit bg-white mx-auto my-auto w-fit rounded-xl py-4 px-8">
-        <img src="../assets/bijitUPI.png" class="w-96 h-96 mx-auto">
-      </div>
-    </div>
-    <div class="flex w-full">
+</head>
+
+<body class="bg-gray-800">
+  <div id="particles-js"></div>
+  <div id="notice-modal" class="blurred-in flex z-10 w-full h-screen fixed ">
+    <div
+      class="scale-up-center flex flex-col max-h-[30rem] bg-gray-300 mx-auto my-auto w-[75%] sm:w-[50%] rounded-xl py-4 px-8 overflow-y-auto">
       <div
-        class="flex-col sm:m-16 m-4 w-full pb-1 sm:pb-6 items-center justify-center border-4 bg-slate-800 bg-opacity-80 border-blue-400 shadow-blue-400 sm:rounded-2xl rounded-lg h-fit"
-      >
+        class="w-full text-center font-[Plutur] md:text-6xl sm:text-4xl text-2xl tracking-widest font-extrabold text-slate-600 my-2">
+        Eurekites' Manual</div>
+      <div class=" mb-6 text-red-800 text-sm md:text-lg">
+        <ul>
+          <li>&#8226; Inter-college teams are not allowed. Every team member must be from the same college.</li>
+          <li>&#8226; The team size should be exactly 2</li>
+          <li>&#8226; Only Submissions made through the team lead’s account will be considered. Submissions from any other account will not be considered.</li>
+          <li>&#8226; There is a one-team limit per college</li>
+          <li>&#8226; Eureka is a 2.5-hour long event that will be designed to take place in levels. After clearing one level, the participating team will move on to the next one, which will be of a greater level of difficulty. The team that clears all the levels using the fewest hints and in the shortest amount of time will be declared the winner.</li>
+          <li>&#8226; Be respectful and considerate of fellow participants, organizers, judges, and spectators.</li>
+          <li>&#8226; Do not cheat, plagiarize, or engage in any form of academic dishonesty. Code submissions should be
+            your original work.</li>
+          <li>&#8226; Do not collaborate with others unless explicitly allowed by the competition rules.</li>
+          <li>&#8226; Encourage a positive and supportive atmosphere.</li>
+          <li>&#8226; Adhere to a strong code of ethics when solving problems and writing code.</li>
+          <li>&#8226; Prioritize correctness, efficiency, and elegance in your solutions.</li>
+          <li>&#8226; Do not engage in harmful activities, such as hacking, cracking, or any form of malicious coding.
+          </li>
+          <li>&#8226; Adhere to the competition schedule, including start times, submission deadlines, and breaks.</li>
+          <li>&#8226; Late submissions may not be accepted, so be punctual.</li>
+          <li>&#8226; Do not attempt to manipulate or disrupt the competition platform.</li>
+          <li>&#8226; Understand that violations of the code of conduct may result in penalties, disqualification, or
+            other consequences, as determined by the organizers.</li>
+          <li>&#8226; The decisions of the competition organizers and judges are final. Respect their rulings and
+            decisions.</li>
+        </ul>
+        </ul>
+      </div>
+      <button id="model-confirm" onclick="hideModal()"
+        class="bg-indigo-300 w-fit mx-auto px-4 text-sm md:text-lg rounded-full py-1 border border-indigo-700 text-indigo-700 hover:text-indigo-300 hover:bg-indigo-700 hover:border-indigo-700 transition-all duration-200 ">I
+        have read the manual</button>
+    </div>
+  </div>
+  <div id="upi-modal" class="blurred-in flex z-10 w-full h-screen fixed hidden">
+    <div class="upi-qr scale-up-center flex flex-col h-fit bg-white mx-auto my-auto w-fit rounded-xl py-4 px-8">
+      <img src="../assets/bijitUPI.png" class="w-96 h-96 mx-auto">
+    </div>
+  </div>
+  <div class="flex w-full">
+    <div
+      class="flex-col sm:m-16 m-4 w-full pb-1 sm:pb-6 items-center justify-center border-4 bg-slate-800 bg-opacity-80 border-blue-400 shadow-blue-400 sm:rounded-2xl rounded-lg h-fit">
+      <div class="w-full mb-2 sm:mb-4 justify-between flex h-auto bg-gray-600 sm:rounded-t-xl rounded-t-sm">
+        <div class="flex">
+          <svg class="sm:w-4 w-2" style="margin: 1vw" viewBox="0 0 52 52" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <circle cx="26" cy="26" r="26" fill="#FF4747" />
+          </svg>
+          <svg class="sm:w-4 w-2" style="margin-right: 1vw" viewBox="0 0 52 52" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <circle cx="26" cy="26" r="26" fill="#FFCC47" />
+          </svg>
+          <svg class="sm:w-4 w-2" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="26" cy="26" r="26" fill="#47FF5A" />
+          </svg>
+        </div>
+        <div class="text-gray-400 sm:text-lg text-[0.6rem] leading-[1rem] list-image-none"
+          style="margin: 1vw; font-family: 'Open Sans'">
+          rkmvcc/terminal/eureka
+        </div>
+        <div class="text-gray-400 opacity-30 text-[0.5rem] leading-[1rem]"
+          style="margin: 1vw; font-family: 'Open Sans'">
+          xx/08/23
+        </div>
+      </div>
+      <div class="w-full flex flex-col justify-center items-center p-3">
         <div
-          class="w-full mb-2 sm:mb-4 justify-between flex h-auto bg-gray-600 sm:rounded-t-xl rounded-t-sm"
-        >
-          <div class="flex">
-            <svg
-              class="sm:w-4 w-2"
-              style="margin: 1vw"
-              viewBox="0 0 52 52"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle cx="26" cy="26" r="26" fill="#FF4747" />
-            </svg>
-            <svg
-              class="sm:w-4 w-2"
-              style="margin-right: 1vw"
-              viewBox="0 0 52 52"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle cx="26" cy="26" r="26" fill="#FFCC47" />
-            </svg>
-            <svg
-              class="sm:w-4 w-2"
-              viewBox="0 0 52 52"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle cx="26" cy="26" r="26" fill="#47FF5A" />
-            </svg>
-          </div>
+          class="w-full text-center tracking-widest lg:text-[6rem] lg:leading-[5rem] sm:text-[4.5rem] sm:leading-[4rem] text-[2.2rem] leading-[2.5rem] text-indigo-500 uppercase"
+          style="font-family: 'Plutur'">
+          Register Now
           <div
-            class="text-gray-400 sm:text-lg text-[0.6rem] leading-[1rem] list-image-none"
-            style="margin: 1vw; font-family: 'Open Sans'"
-          >
-            rkmvcc/terminal/eureka
-          </div>
-          <div
-            class="text-gray-400 opacity-30 text-[0.5rem] leading-[1rem]"
-            style="margin: 1vw; font-family: 'Open Sans'"
-          >
-            xx/08/23
+            class="text-[0.6rem] leading-[0.7rem] sm:text-[0.9rem] sm:leading-[2rem] lg:text-[1.2rem] lg:leading-[3rem] tracking-wide text-green-500"
+            style="font-family: 'Open Sans'">
+            Eurekites Register Yourself for the ultimate Quiz Compition
           </div>
         </div>
-        <div class="w-full flex flex-col justify-center items-center p-3">
+        <form action="https://bijit.xyz/form/process.php" method="post"
+          class="flex flex-col items-center justify-center  w-full">
+          <input type="hidden" name="form_tools_form_id" value="5" />
           <div
-            class="w-full text-center tracking-widest lg:text-[6rem] lg:leading-[5rem] sm:text-[4.5rem] sm:leading-[4rem] text-[2.2rem] leading-[2.5rem] text-indigo-500 uppercase"
-            style="font-family: 'Plutur'"
-          >
-            Register Now
+            class="w-[90%] lg:w-[70%] px-4 py-4 mt-5 lg:mt-10 rounded-xl bg-clip-padding backdrop-filter backdrop-blur-[4px] text-amber-600 text-[1rem] leading-[1rem] lg:text-2xl transition-all duration-500 group font-bold border-2 border-indigo-300 focus-within:text-yellow-600 focus-within:text-sm lg:focus-within:text-xl focus-within:ring-2 focus-within:ring-indigo-600 focus-within:bg-gray-800 focus-within:border-indigo-400">
+            Team Name <span class="text-red-700">*</span>
             <div
-              class="text-[0.6rem] leading-[0.7rem] sm:text-[0.9rem] sm:leading-[2rem] lg:text-[1.2rem] lg:leading-[3rem] tracking-wide text-green-500"
-              style="font-family: 'Open Sans'"
-            >
-              Eurekites Register Yourself for the ultimate Quiz Compition
+              class="text-[0%] text-transparent italic font-normal translate-y-[-50%] group-focus-within:translate-y-0 group-focus-within:text-amber-600 group-focus-within:text-[0.6rem] group-focus-within:leading-[0.8rem] lg:group-focus-within:text-sm group-focus-within:h-3 h-0 transition-all duration-500">
+              What should we call you?
             </div>
-          </div>
-          <form action="https://bijit.xyz/form/process.php" method="post" class="flex flex-col items-center justify-center  w-full">
-            <input type="hidden" name="form_tools_initialize_form" value="1">
-            <input type="hidden" name="form_tools_form_id" value="1">
-            <div
-              class="w-[90%] lg:w-[70%] px-4 py-4 mt-5 lg:mt-10 rounded-xl bg-clip-padding backdrop-filter backdrop-blur-[4px] text-amber-600 text-[1rem] leading-[1rem] lg:text-2xl transition-all duration-500 group font-bold border-2 border-indigo-300 focus-within:text-yellow-600 focus-within:text-sm lg:focus-within:text-xl focus-within:ring-2 focus-within:ring-indigo-600 focus-within:bg-gray-800 focus-within:border-indigo-400"
-            >
-            First Name <span class="text-red-700">*</span>
-            <div
-              class="text-[0%] text-transparent italic font-normal translate-y-[-50%] group-focus-within:translate-y-0 group-focus-within:text-amber-600 group-focus-within:text-[0.6rem] group-focus-within:leading-[0.8rem] lg:group-focus-within:text-sm group-focus-within:h-3 h-0 transition-all duration-500"
-            >
-              How shall we know you?
-            </div>
-            <input
-              type="text"
-              required
-              name="fname"
-              class="w-full rounded-lg mt-2 lg:mt-6 bg-slate-700 text-white text-sm px-2 py-1 lg:px-4 lg:py-2 lg:text-lg font-extralight border-none outline-none"
-            />
+            <input type="text" required name="fname"
+              class="w-full rounded-lg mt-2 lg:mt-6 bg-slate-700 text-white text-sm px-2 py-1 lg:px-4 lg:py-2 lg:text-lg font-extralight border-none outline-none" />
           </div>
           <div
-            class="w-[90%] lg:w-[70%] px-4 py-4 mt-5 lg:mt-10 rounded-xl bg-clip-padding backdrop-filter backdrop-blur-[4px] text-amber-600 text-[1rem] leading-[1rem] lg:text-2xl transition-all duration-500 group font-bold border border-indigo-300 focus-within:text-yellow-600 focus-within:text-sm lg:focus-within:text-xl focus-within:ring-2 focus-within:ring-indigo-600 focus-within:bg-gray-800 focus-within:border-indigo-400"
-          >
-            Last Name <span class="text-red-700">*</span>
+            class="w-[90%] lg:w-[70%] px-4 py-4 mt-5 lg:mt-10 rounded-xl bg-clip-padding backdrop-filter backdrop-blur-[4px] text-amber-600 text-[1rem] leading-[1rem] lg:text-2xl transition-all duration-500 group font-bold border-2 border-indigo-300 focus-within:text-yellow-600 focus-within:text-sm lg:focus-within:text-xl focus-within:ring-2 focus-within:ring-indigo-600 focus-within:bg-gray-800 focus-within:border-indigo-400">
+            First Contestant Name <span class="text-red-700">*</span>
             <div
-              class="text-[0%] text-transparent italic font-normal translate-y-[-50%] group-focus-within:translate-y-0 group-focus-within:text-amber-600 group-focus-within:text-[0.6rem] group-focus-within:leading-[0.8rem] lg:group-focus-within:text-sm group-focus-within:h-3 h-0 transition-all duration-500"
-            >
-              How shall we know you?
+              class="text-[0%] text-transparent italic font-normal translate-y-[-50%] group-focus-within:translate-y-0 group-focus-within:text-amber-600 group-focus-within:text-[0.6rem] group-focus-within:leading-[0.8rem] lg:group-focus-within:text-sm group-focus-within:h-3 h-0 transition-all duration-500">
+              Whom did you have in team?
             </div>
-            <input
-              type="text"
-              required
-              name="lname"
-              class="w-full rounded-lg mt-2 lg:mt-6 bg-slate-700 text-white text-sm px-2 py-1 lg:px-4 lg:py-2 lg:text-lg font-extralight border-none outline-none"
-            />
+            <input type="text" required name="team_name"
+              class="w-full rounded-lg mt-2 lg:mt-6 bg-slate-700 text-white text-sm px-2 py-1 lg:px-4 lg:py-2 lg:text-lg font-extralight border-none outline-none" />
           </div>
           <div
-            class="w-[90%] lg:w-[70%] px-4 py-4 mt-5 lg:mt-10 rounded-xl bg-clip-padding backdrop-filter backdrop-blur-[4px] text-amber-600 text-[1rem] leading-[1rem] lg:text-2xl transition-all duration-500 group font-bold border border-indigo-300 focus-within:text-yellow-600 focus-within:text-sm lg:focus-within:text-xl focus-within:ring-2 focus-within:ring-indigo-600 focus-within:bg-gray-800 focus-within:border-indigo-400"
-          >
+            class="w-[90%] lg:w-[70%] px-4 py-4 mt-5 lg:mt-10 rounded-xl bg-clip-padding backdrop-filter backdrop-blur-[4px] text-amber-600 text-[1rem] leading-[1rem] lg:text-2xl transition-all duration-500 group font-bold border-2 border-indigo-300 focus-within:text-yellow-600 focus-within:text-sm lg:focus-within:text-xl focus-within:ring-2 focus-within:ring-indigo-600 focus-within:bg-gray-800 focus-within:border-indigo-400">
+            Second Contestant Name <span class="text-red-700">*</span>
+            <div
+              class="text-[0%] text-transparent italic font-normal translate-y-[-50%] group-focus-within:translate-y-0 group-focus-within:text-amber-600 group-focus-within:text-[0.6rem] group-focus-within:leading-[0.8rem] lg:group-focus-within:text-sm group-focus-within:h-3 h-0 transition-all duration-500">
+              Whom did you have in team?
+            </div>
+            <input type="text" required name="contestant_1"
+              class="w-full rounded-lg mt-2 lg:mt-6 bg-slate-700 text-white text-sm px-2 py-1 lg:px-4 lg:py-2 lg:text-lg font-extralight border-none outline-none" />
+          </div>
+          <div
+            class="w-[90%] lg:w-[70%] px-4 py-4 mt-5 lg:mt-10 rounded-xl bg-clip-padding backdrop-filter backdrop-blur-[4px] text-amber-600 text-[1rem] leading-[1rem] lg:text-2xl transition-all duration-500 group font-bold border border-indigo-300 focus-within:text-yellow-600 focus-within:text-sm lg:focus-within:text-xl focus-within:ring-2 focus-within:ring-indigo-600 focus-within:bg-gray-800 focus-within:border-indigo-400">
             Email Address <span class="text-red-700">*</span>
             <div
-              class="text-[0%] text-transparent italic font-normal translate-y-[-50%] group-focus-within:translate-y-0 group-focus-within:text-amber-600 group-focus-within:text-[0.6rem] group-focus-within:leading-[0.8rem] lg:group-focus-within:text-sm group-focus-within:h-3 h-0 transition-all duration-500"
-            >
+              class="text-[0%] text-transparent italic font-normal translate-y-[-50%] group-focus-within:translate-y-0 group-focus-within:text-amber-600 group-focus-within:text-[0.6rem] group-focus-within:leading-[0.8rem] lg:group-focus-within:text-sm group-focus-within:h-3 h-0 transition-all duration-500">
               How shall we reach you?
             </div>
-            <input
-              type="email"
-              required
-              name="email"
-              class="w-full rounded-lg mt-2 lg:mt-6 bg-slate-700 text-white text-sm px-2 py-1 lg:px-4 lg:py-2 lg:text-lg font-extralight border-none outline-none"
-            />
+            <input type="email" required name="email"
+              class="w-full rounded-lg mt-2 lg:mt-6 bg-slate-700 text-white text-sm px-2 py-1 lg:px-4 lg:py-2 lg:text-lg font-extralight border-none outline-none" />
           </div>
           <div
-            class="w-[90%] lg:w-[70%] px-4 py-4 mt-5 lg:mt-10 rounded-xl bg-clip-padding backdrop-filter backdrop-blur-[4px] text-amber-600 text-[1rem] leading-[1rem] lg:text-2xl transition-all duration-500 group font-bold border border-indigo-300 focus-within:text-yellow-600 focus-within:text-sm lg:focus-within:text-xl focus-within:ring-2 focus-within:ring-indigo-600 focus-within:bg-gray-800 focus-within:border-indigo-400"
-          >
+            class="w-[90%] lg:w-[70%] px-4 py-4 mt-5 lg:mt-10 rounded-xl bg-clip-padding backdrop-filter backdrop-blur-[4px] text-amber-600 text-[1rem] leading-[1rem] lg:text-2xl transition-all duration-500 group font-bold border border-indigo-300 focus-within:text-yellow-600 focus-within:text-sm lg:focus-within:text-xl focus-within:ring-2 focus-within:ring-indigo-600 focus-within:bg-gray-800 focus-within:border-indigo-400">
             Whatsapp Number <span class="text-red-700">*</span>
             <div
-              class="text-[0%] text-transparent italic font-normal translate-y-[-50%] group-focus-within:translate-y-0 group-focus-within:text-amber-600 group-focus-within:text-[0.6rem] group-focus-within:leading-[0.8rem] lg:group-focus-within:text-sm group-focus-within:h-3 h-0 transition-all duration-500"
-            >
+              class="text-[0%] text-transparent italic font-normal translate-y-[-50%] group-focus-within:translate-y-0 group-focus-within:text-amber-600 group-focus-within:text-[0.6rem] group-focus-within:leading-[0.8rem] lg:group-focus-within:text-sm group-focus-within:h-3 h-0 transition-all duration-500">
               How shall we reach you on Whatsapp
             </div>
-            <input
-              type="number"
-              maxlength="10"
-              minlength="10"
-              inputmode="numeric"
-              required
-              name="wa_number"
-              class="w-full rounded-lg mt-2 lg:mt-6 bg-slate-700 text-white text-sm px-2 py-1 lg:px-4 lg:py-2 lg:text-lg font-extralight border-none outline-none"
-            />
+            <input type="number" maxlength="10" minlength="10" inputmode="numeric" required name="wa_number"
+              class="w-full rounded-lg mt-2 lg:mt-6 bg-slate-700 text-white text-sm px-2 py-1 lg:px-4 lg:py-2 lg:text-lg font-extralight border-none outline-none" />
           </div>
           <div
-            class="w-[90%] lg:w-[70%] px-4 py-4 mt-5 lg:mt-10 rounded-xl bg-clip-padding backdrop-filter backdrop-blur-[4px] text-amber-600 text-[1rem] leading-[1rem] lg:text-2xl transition-all duration-500 group font-bold border border-indigo-300 focus-within:text-yellow-600 focus-within:text-sm lg:focus-within:text-xl focus-within:ring-2 focus-within:ring-indigo-600 focus-within:bg-gray-800 focus-within:border-indigo-400"
-          >
+            class="w-[90%] lg:w-[70%] px-4 py-4 mt-5 lg:mt-10 rounded-xl bg-clip-padding backdrop-filter backdrop-blur-[4px] text-amber-600 text-[1rem] leading-[1rem] lg:text-2xl transition-all duration-500 group font-bold border border-indigo-300 focus-within:text-yellow-600 focus-within:text-sm lg:focus-within:text-xl focus-within:ring-2 focus-within:ring-indigo-600 focus-within:bg-gray-800 focus-within:border-indigo-400">
             College Name <span class="text-red-700">*</span>
             <div
-              class="text-[0%] text-transparent italic font-normal translate-y-[-50%] group-focus-within:translate-y-0 group-focus-within:text-amber-600 group-focus-within:text-[0.6rem] group-focus-within:leading-[0.8rem] lg:group-focus-within:text-sm group-focus-within:h-3 h-0 transition-all duration-500"
-            >
+              class="text-[0%] text-transparent italic font-normal translate-y-[-50%] group-focus-within:translate-y-0 group-focus-within:text-amber-600 group-focus-within:text-[0.6rem] group-focus-within:leading-[0.8rem] lg:group-focus-within:text-sm group-focus-within:h-3 h-0 transition-all duration-500">
               Which college do you represent?
             </div>
-            <input
-              type="text"
-              required
-              name="college"
-              class="w-full rounded-lg mt-2 lg:mt-6 bg-slate-700 text-white text-sm px-2 py-1 lg:px-4 lg:py-2 lg:text-lg font-extralight border-none outline-none"
-            />
+            <input type="text" required name="college"
+              class="w-full rounded-lg mt-2 lg:mt-6 bg-slate-700 text-white text-sm px-2 py-1 lg:px-4 lg:py-2 lg:text-lg font-extralight border-none outline-none" />
           </div>
           <div
-            class="w-[90%] lg:w-[70%] px-4 py-4 mt-5 lg:mt-10 rounded-xl bg-clip-padding backdrop-filter backdrop-blur-[4px] text-amber-600 text-[1rem] leading-[1rem] lg:text-2xl transition-all duration-500 group font-bold border border-indigo-300 focus-within:text-yellow-600 focus-within:text-sm lg:focus-within:text-xl focus-within:ring-2 focus-within:ring-indigo-600 focus-within:bg-gray-800 focus-within:border-indigo-400"
-          >
-            Semester and Level <span class="text-red-700">*</span>
+            class="w-[90%] lg:w-[70%] px-4 py-4 mt-5 lg:mt-10 rounded-xl bg-clip-padding backdrop-filter backdrop-blur-[4px] text-amber-600 text-[1rem] leading-[1rem] lg:text-2xl transition-all duration-500 group font-bold border border-indigo-300 focus-within:text-yellow-600 focus-within:text-sm lg:focus-within:text-xl focus-within:ring-2 focus-within:ring-indigo-600 focus-within:bg-gray-800 focus-within:border-indigo-400">
+            Semester and Level of First Contestant<span class="text-red-700">*</span>
             <div
-              class="text-[0%] text-transparent italic font-normal translate-y-[-50%] group-focus-within:translate-y-0 group-focus-within:text-amber-600 group-focus-within:text-[0.6rem] group-focus-within:leading-[0.8rem] lg:group-focus-within:text-sm group-focus-within:h-3 h-0 transition-all duration-500"
-            >
+              class="text-[0%] text-transparent italic font-normal translate-y-[-50%] group-focus-within:translate-y-0 group-focus-within:text-amber-600 group-focus-within:text-[0.6rem] group-focus-within:leading-[0.8rem] lg:group-focus-within:text-sm group-focus-within:h-3 h-0 transition-all duration-500">
               Which semester do you study in?
             </div>
             <div class="sm:flex-row flex flex-col sm:gap-x-4 gap-y-2">
-              <select
-                required
-                name="year"
-                class="w-full rounded-lg mt-2 lg:mt-6 bg-slate-700 text-white text-sm px-2 py-1 lg:px-4 lg:py-2 lg:text-lg font-extralight border-none outline-none"
-              >
+              <select required name="year01"
+                class="w-full rounded-lg mt-2 lg:mt-6 bg-slate-700 text-white text-sm px-2 py-1 lg:px-4 lg:py-2 lg:text-lg font-extralight border-none outline-none">
                 <option value="">Select Year</option>
                 <option value="first">1st Year</option>
                 <option value="Second">2nd Year</option>
                 <option value="Third">3rd Year</option>
                 <option value="Fourth">4th Year</option>
               </select>
-              <select
-                required
-                name="level"
-                class="w-full rounded-lg mt-2 lg:mt-6 bg-slate-700 text-white text-sm px-2 py-1 lg:px-4 lg:py-2 lg:text-lg font-extralight border-none outline-none"
-              >
+              <select required name="level01"
+                class="w-full rounded-lg mt-2 lg:mt-6 bg-slate-700 text-white text-sm px-2 py-1 lg:px-4 lg:py-2 lg:text-lg font-extralight border-none outline-none">
                 <option value="">Graduation Level</option>
                 <option value="ug">UG</option>
                 <option value="pg">PG</option>
@@ -233,102 +191,146 @@
             </div>
           </div>
           <div
-            class="w-[90%] lg:w-[70%] px-4 py-4 mt-5 lg:mt-10 rounded-xl bg-clip-padding backdrop-filter backdrop-blur-[4px] text-amber-600 text-[1rem] leading-[1rem] lg:text-2xl transition-all duration-500 group font-bold border border-indigo-300 "
-          >
-          <div class="flex w-full mb-2 justify-between">
-            <div>
-            <div>Make Payment <span class="text-red-700">*</span></div>
-              <div
-              class="text-[0.6rem] leading-[0.8rem] italic font-normal text-amber-600 lg:text-sm">
-              <a href="upi://pay?pa=bijit-fave@idfcbank&amp;&am=50&amp;&tn=nirdesh registration&amp;=BIJIT MONDAL &amp;cu=INR" class="text-red-700 hover:underline font-extrabold">Click here to pay</a> or click the QR Code to expand and scan
+            class="w-[90%] lg:w-[70%] px-4 py-4 mt-5 lg:mt-10 rounded-xl bg-clip-padding backdrop-filter backdrop-blur-[4px] text-amber-600 text-[1rem] leading-[1rem] lg:text-2xl transition-all duration-500 group font-bold border border-indigo-300 focus-within:text-yellow-600 focus-within:text-sm lg:focus-within:text-xl focus-within:ring-2 focus-within:ring-indigo-600 focus-within:bg-gray-800 focus-within:border-indigo-400">
+            Semester and Level of Second Contestant<span class="text-red-700">*</span>
+            <div
+              class="text-[0%] text-transparent italic font-normal translate-y-[-50%] group-focus-within:translate-y-0 group-focus-within:text-amber-600 group-focus-within:text-[0.6rem] group-focus-within:leading-[0.8rem] lg:group-focus-within:text-sm group-focus-within:h-3 h-0 transition-all duration-500">
+              Which semester do you study in?
+            </div>
+            <div class="sm:flex-row flex flex-col sm:gap-x-4 gap-y-2">
+              <select required name="year02"
+                class="w-full rounded-lg mt-2 lg:mt-6 bg-slate-700 text-white text-sm px-2 py-1 lg:px-4 lg:py-2 lg:text-lg font-extralight border-none outline-none">
+                <option value="">Select Year</option>
+                <option value="first">1st Year</option>
+                <option value="Second">2nd Year</option>
+                <option value="Third">3rd Year</option>
+                <option value="Fourth">4th Year</option>
+              </select>
+              <select required name="level02"
+                class="w-full rounded-lg mt-2 lg:mt-6 bg-slate-700 text-white text-sm px-2 py-1 lg:px-4 lg:py-2 lg:text-lg font-extralight border-none outline-none">
+                <option value="">Graduation Level</option>
+                <option value="ug">UG</option>
+                <option value="pg">PG</option>
+              </select>
             </div>
           </div>
-            <div onclick="showupiModal()" class="upi-qr bg-white h-6 w-6 sm:h-10 sm:w-10 md:h-14 md:w-14 hover:scale-110 transition-all duration-300 hover:cursor-pointer">
-              <img src="../assets/bijitUPI.png" class="upi-qr h-6 w-6 sm:h-10 sm:w-10 md:h-14 md:w-14">
+          <div
+            class="w-[90%] lg:w-[70%] px-4 py-4 mt-5 lg:mt-10 rounded-xl bg-clip-padding backdrop-filter backdrop-blur-[4px] text-amber-600 text-[1rem] leading-[1rem] lg:text-2xl transition-all duration-500 group font-bold border border-indigo-300 ">
+            <div class="flex w-full mb-2 justify-between">
+              <div>
+                <div>Make Payment <span class="text-red-700">*</span></div>
+                <div class="text-[0.6rem] leading-[0.8rem] italic font-normal text-amber-600 lg:text-sm">
+                  <span
+                    onclick="copyToClipboard('bijit-fave@idfcbank')"
+                    class="text-cyan-700 font-extrabold">bijit-fave@idfcbank</span> or click the QR Code to
+                  expand and scan
+                </div>
+              </div>
+              <div onclick="showupiModal()"
+                class="upi-qr bg-white h-6 w-6 sm:h-10 sm:w-10 md:h-14 md:w-14 hover:scale-110 transition-all duration-300 hover:cursor-pointer">
+                <img src="../assets/bijitUPI.png" class="upi-qr h-6 w-6 sm:h-10 sm:w-10 md:h-14 md:w-14">
+              </div>
             </div>
+            <input type="text" required placeholder="Enter Transaction ID" name="txn_no"
+              class="w-full rounded-lg bg-slate-700 text-white text-sm px-2 py-1 lg:px-4 lg:py-2 lg:text-lg font-extralight border-none outline-none" />
           </div>
-            <input
-              type="text"
-              required
-              placeholder="Enter Transaction ID"
-              name="txn_no"
-              class="w-full rounded-lg bg-slate-700 text-white text-sm px-2 py-1 lg:px-4 lg:py-2 lg:text-lg font-extralight border-none outline-none"
-            />
-          </div>
-          <div class="flex w-[90%] lg:w-[70%] px-4 py-4 mt-5 lg:mt-10 rounded-xl bg-white bg-clip-padding backdrop-filter backdrop-blur-[4px] bg-opacity-10 text-white text-[0.8rem] lg:text-lg transition-all duration-500 border border-indigo-300">
+          <div
+            class="flex w-[90%] lg:w-[70%] px-4 py-4 mt-5 lg:mt-10 rounded-xl bg-white bg-clip-padding backdrop-filter backdrop-blur-[4px] bg-opacity-10 text-white text-[0.8rem] lg:text-lg transition-all duration-500 border border-indigo-300">
             <div class="flex items-center justify-center mr-2">
               <input type="checkbox" required class="w-5 h-5 sm:w-[0.9rem] sm:h-[0.9rem]">
             </div>
             <div>
-              I have read the <span onclick="showModal()" class="text-amber-600 hover:cursor-pointer hover:underline">Eurekites' Manual</span> and will follow the code of conduct
+              I have read the <span onclick="showModal()"
+                class="text-amber-600 hover:cursor-pointer hover:underline">Eurekites' Manual</span> and will follow the
+              code of conduct
             </div>
           </div>
-          <input type="submit" value="submit" class="w-[50%] lg:w-[30%] py-1 sm:py-3 mt-5 lg:mt-10 bg-gradient-to-r from-[#f7b733] to-[#fc4a1a] rounded-2xl text-lg sm:text-3xl tracking-[8px] sm:tracking-[4px] font-[Plutur] font-bold uppercase text-white hover:to-[#ff724b] hover:from-[#ffcb63] hover:text-red-600 sm:hover:tracking-[25px] hover:scale-110 transition-all duration-200 hover:cursor-pointer">
+          <input type="submit" value="submit"
+            class="w-[50%] lg:w-[30%] py-1 sm:py-3 mt-5 lg:mt-10 bg-gradient-to-r from-[#f7b733] to-[#fc4a1a] rounded-2xl text-lg sm:text-3xl tracking-[8px] sm:tracking-[4px] font-[Plutur] font-bold uppercase text-white hover:to-[#ff724b] hover:from-[#ffcb63] hover:text-red-600 sm:hover:tracking-[25px] hover:scale-110 transition-all duration-200 hover:cursor-pointer">
         </form>
-        </div>
       </div>
     </div>
-    <footer 
-      class="backdrop-filter backdrop-blur-[4px] bg-gray-900 bg-opacity-40"
-    >
-      <div class="w-full max-w-screen-2xl mx-auto p-4 md:py-8">
-        <div class="sm:flex sm:items-center sm:justify-between">
-          <a href="#" class="w-fit flex flex-col items-center mb-4 mx-auto sm:mx-2 sm:mb-0 group hover:scale-105 transition-all duration-200">
-						<span
-							class="self-center font-[anurati] text-2xl sm:text-4xl tracking-widest font-semibold whitespace-nowrap text-white group-hover:text-pink-600 transition-all duration-200 uppercase"
-							>Eureka</span
-						>
-            <span
-										class="self-center font-[Open Sans] text-xs sm:text-sm whitespace-nowrap text-white group-hover:text-pink-400 transition-all duration-200"
-										>Mystery Solving Contest</span
-									>
-          </a>
-          <ul
-            class="flex justify-center gap-5 flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400"
-          >
-            <li>
-              <a href="https://twitter.com/RKMVCCollege" class=" hover:text-white transition-all ease-linear duration-150 text-gray-600">
-                <svg class="w-10 h-10 hover:scale-125 transition-all duration-150 ease-linear"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 50 50"
-                  fill="currentColor"
-                >
+  </div>
+  <footer class="backdrop-filter backdrop-blur-[4px] bg-gray-900 bg-opacity-40">
+    <div class="w-full max-w-screen-2xl mx-auto p-4 md:py-8">
+      <div class="sm:flex sm:items-center sm:justify-between">
+        <a href="#"
+          class="w-fit flex flex-col items-center mb-4 mx-auto sm:mx-2 sm:mb-0 group hover:scale-105 transition-all duration-200">
+          <span
+            class="self-center font-[anurati] text-2xl sm:text-4xl tracking-widest font-semibold whitespace-nowrap text-white group-hover:text-pink-600 transition-all duration-200 uppercase">Eureka</span>
+          <span
+            class="self-center font-[Open Sans] text-xs sm:text-sm whitespace-nowrap text-white group-hover:text-pink-400 transition-all duration-200">Mystery
+            Solving Contest</span>
+        </a>
+        <ul
+          class="flex justify-center gap-5 flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
+          <li>
+            <a href="https://twitter.com/RKMVCCollege"
+              class=" hover:text-white transition-all ease-linear duration-150 text-gray-600">
+              <svg class="w-10 h-10 hover:scale-125 transition-all duration-150 ease-linear"
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" fill="currentColor">
+                <path
+                  d="M 11 4 C 7.134 4 4 7.134 4 11 L 4 39 C 4 42.866 7.134 46 11 46 L 39 46 C 42.866 46 46 42.866 46 39 L 46 11 C 46 7.134 42.866 4 39 4 L 11 4 z M 13.085938 13 L 21.023438 13 L 26.660156 21.009766 L 33.5 13 L 36 13 L 27.789062 22.613281 L 37.914062 37 L 29.978516 37 L 23.4375 27.707031 L 15.5 37 L 13 37 L 22.308594 26.103516 L 13.085938 13 z M 16.914062 15 L 31.021484 35 L 34.085938 35 L 19.978516 15 L 16.914062 15 z" />
+              </svg></a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/school/ramkrishna-mission-vivekananda-centenary-college/"
+              class=" hover:text-white transition-all ease-linear duration-150 text-gray-600"><svg fill="currentColor"
+                class="w-8 h-8 hover:scale-125 transition-all duration-150 ease-linear" viewBox="0 0 32 32"
+                version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                  <title>linkedin</title>
                   <path
-                    d="M 11 4 C 7.134 4 4 7.134 4 11 L 4 39 C 4 42.866 7.134 46 11 46 L 39 46 C 42.866 46 46 42.866 46 39 L 46 11 C 46 7.134 42.866 4 39 4 L 11 4 z M 13.085938 13 L 21.023438 13 L 26.660156 21.009766 L 33.5 13 L 36 13 L 27.789062 22.613281 L 37.914062 37 L 29.978516 37 L 23.4375 27.707031 L 15.5 37 L 13 37 L 22.308594 26.103516 L 13.085938 13 z M 16.914062 15 L 31.021484 35 L 34.085938 35 L 19.978516 15 L 16.914062 15 z"
-                  /></svg
-              ></a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/school/ramkrishna-mission-vivekananda-centenary-college/" class=" hover:text-white transition-all ease-linear duration-150 text-gray-600"
-                ><svg fill="currentColor" class="w-8 h-8 hover:scale-125 transition-all duration-150 ease-linear" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>linkedin</title> <path d="M28.778 1.004h-25.56c-0.008-0-0.017-0-0.027-0-1.199 0-2.172 0.964-2.186 2.159v25.672c0.014 1.196 0.987 2.161 2.186 2.161 0.010 0 0.019-0 0.029-0h25.555c0.008 0 0.018 0 0.028 0 1.2 0 2.175-0.963 2.194-2.159l0-0.002v-25.67c-0.019-1.197-0.994-2.161-2.195-2.161-0.010 0-0.019 0-0.029 0h0.001zM9.9 26.562h-4.454v-14.311h4.454zM7.674 10.293c-1.425 0-2.579-1.155-2.579-2.579s1.155-2.579 2.579-2.579c1.424 0 2.579 1.154 2.579 2.578v0c0 0.001 0 0.002 0 0.004 0 1.423-1.154 2.577-2.577 2.577-0.001 0-0.002 0-0.003 0h0zM26.556 26.562h-4.441v-6.959c0-1.66-0.034-3.795-2.314-3.795-2.316 0-2.669 1.806-2.669 3.673v7.082h-4.441v-14.311h4.266v1.951h0.058c0.828-1.395 2.326-2.315 4.039-2.315 0.061 0 0.121 0.001 0.181 0.003l-0.009-0c4.5 0 5.332 2.962 5.332 6.817v7.855z"></path> </g></svg></a
-              >
-            </li>
-            <li>
-              <a href="mailto:bijitmondalrkmvcc@gmail.com" class="hover:text-white transition-all ease-linear duration-150 text-gray-600">
-                <svg fill="currentColor" class="w-10 h-10 hover:scale-125 transition-all duration-150 ease-linear" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="mail" class="icon glyph" fill="none"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M22,8.32V18a2,2,0,0,1-2,2H4a2,2,0,0,1-2-2V8.69L4,9.78l7.52,4.1A1,1,0,0,0,12,14a1,1,0,0,0,.5-.14L20,9.49Z" style="fill:currentColor"></path><path d="M22,6h0L20,7.18l-8,4.67L4,7.5,2,6.4V6A2,2,0,0,1,4,4H20A2,2,0,0,1,22,6Z" style="fill:currentColor"></path></g></svg>
-                </a>
-            </li>
-            <li>
-              <a href="https://www.facebook.com/p/Ramakrishna-Mission-Vivekananda-Centenary-College-Rahara-100071537677641/" class="hover:text-white transition-all ease-linear duration-150 text-gray-600">
-                <svg fill="currentColor" class="w-8 h-8 hover:scale-125 transition-all duration-150 ease-linear" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M20 1C21.6569 1 23 2.34315 23 4V20C23 21.6569 21.6569 23 20 23H4C2.34315 23 1 21.6569 1 20V4C1 2.34315 2.34315 1 4 1H20ZM20 3C20.5523 3 21 3.44772 21 4V20C21 20.5523 20.5523 21 20 21H15V13.9999H17.0762C17.5066 13.9999 17.8887 13.7245 18.0249 13.3161L18.4679 11.9871C18.6298 11.5014 18.2683 10.9999 17.7564 10.9999H15V8.99992C15 8.49992 15.5 7.99992 16 7.99992H18C18.5523 7.99992 19 7.5522 19 6.99992V6.31393C19 5.99091 18.7937 5.7013 18.4813 5.61887C17.1705 5.27295 16 5.27295 16 5.27295C13.5 5.27295 12 6.99992 12 8.49992V10.9999H10C9.44772 10.9999 9 11.4476 9 11.9999V12.9999C9 13.5522 9.44771 13.9999 10 13.9999H12V21H4C3.44772 21 3 20.5523 3 20V4C3 3.44772 3.44772 3 4 3H20Z"></path> </g></svg>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <hr
-          class="my-6 border-gray-200 mx-auto dark:border-gray-700 lg:my-8"
-        />
-        <div
-				class="block text-sm text-gray-600 text-center mb-2"
-				>All © Reserved by Ramakrishna Mission Vivekananda Centenary College</div
-			>
-			<div
-				class="block text-sm text-gray-500 text-center"
-				>Created with ❤️ by <span class="text-red-600 font-bold">Asim Roy Chowdhury</span></div
-			>
+                    d="M28.778 1.004h-25.56c-0.008-0-0.017-0-0.027-0-1.199 0-2.172 0.964-2.186 2.159v25.672c0.014 1.196 0.987 2.161 2.186 2.161 0.010 0 0.019-0 0.029-0h25.555c0.008 0 0.018 0 0.028 0 1.2 0 2.175-0.963 2.194-2.159l0-0.002v-25.67c-0.019-1.197-0.994-2.161-2.195-2.161-0.010 0-0.019 0-0.029 0h0.001zM9.9 26.562h-4.454v-14.311h4.454zM7.674 10.293c-1.425 0-2.579-1.155-2.579-2.579s1.155-2.579 2.579-2.579c1.424 0 2.579 1.154 2.579 2.578v0c0 0.001 0 0.002 0 0.004 0 1.423-1.154 2.577-2.577 2.577-0.001 0-0.002 0-0.003 0h0zM26.556 26.562h-4.441v-6.959c0-1.66-0.034-3.795-2.314-3.795-2.316 0-2.669 1.806-2.669 3.673v7.082h-4.441v-14.311h4.266v1.951h0.058c0.828-1.395 2.326-2.315 4.039-2.315 0.061 0 0.121 0.001 0.181 0.003l-0.009-0c4.5 0 5.332 2.962 5.332 6.817v7.855z">
+                  </path>
+                </g>
+              </svg></a>
+          </li>
+          <li>
+            <a href="mailto:bijitmondalrkmvcc@gmail.com"
+              class="hover:text-white transition-all ease-linear duration-150 text-gray-600">
+              <svg fill="currentColor" class="w-10 h-10 hover:scale-125 transition-all duration-150 ease-linear"
+                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="mail" class="icon glyph" fill="none">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    d="M22,8.32V18a2,2,0,0,1-2,2H4a2,2,0,0,1-2-2V8.69L4,9.78l7.52,4.1A1,1,0,0,0,12,14a1,1,0,0,0,.5-.14L20,9.49Z"
+                    style="fill:currentColor"></path>
+                  <path d="M22,6h0L20,7.18l-8,4.67L4,7.5,2,6.4V6A2,2,0,0,1,4,4H20A2,2,0,0,1,22,6Z"
+                    style="fill:currentColor"></path>
+                </g>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/p/Ramakrishna-Mission-Vivekananda-Centenary-College-Rahara-100071537677641/"
+              class="hover:text-white transition-all ease-linear duration-150 text-gray-600">
+              <svg fill="currentColor" class="w-8 h-8 hover:scale-125 transition-all duration-150 ease-linear"
+                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M20 1C21.6569 1 23 2.34315 23 4V20C23 21.6569 21.6569 23 20 23H4C2.34315 23 1 21.6569 1 20V4C1 2.34315 2.34315 1 4 1H20ZM20 3C20.5523 3 21 3.44772 21 4V20C21 20.5523 20.5523 21 20 21H15V13.9999H17.0762C17.5066 13.9999 17.8887 13.7245 18.0249 13.3161L18.4679 11.9871C18.6298 11.5014 18.2683 10.9999 17.7564 10.9999H15V8.99992C15 8.49992 15.5 7.99992 16 7.99992H18C18.5523 7.99992 19 7.5522 19 6.99992V6.31393C19 5.99091 18.7937 5.7013 18.4813 5.61887C17.1705 5.27295 16 5.27295 16 5.27295C13.5 5.27295 12 6.99992 12 8.49992V10.9999H10C9.44772 10.9999 9 11.4476 9 11.9999V12.9999C9 13.5522 9.44771 13.9999 10 13.9999H12V21H4C3.44772 21 3 20.5523 3 20V4C3 3.44772 3.44772 3 4 3H20Z">
+                  </path>
+                </g>
+              </svg>
+            </a>
+          </li>
+        </ul>
       </div>
-    </footer>
+      <hr class="my-6 border-gray-200 mx-auto dark:border-gray-700 lg:my-8" />
+      <div class="block text-sm text-gray-600 text-center mb-2">All © Reserved by Ramakrishna Mission Vivekananda
+        Centenary College</div>
+      <div class="block text-sm text-gray-500 text-center">Created with ❤️ by <span class="text-red-600 font-bold">Asim
+          Roy Chowdhury</span></div>
+    </div>
+  </footer>
 
-    <script src="../js/eureka-registration.js"></script>
-  </body>
+  <script src="../js/eureka-registration.js"></script>
+</body>
+
 </html>
