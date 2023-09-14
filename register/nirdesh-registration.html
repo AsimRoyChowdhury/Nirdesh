@@ -116,8 +116,7 @@
             </div>
           </div>
           <form action="https://bijit.xyz/form/process.php" method="post" class="flex flex-col items-center justify-center  w-full">
-            <input type="hidden" name="form_tools_initialize_form" value="1">
-            <input type="hidden" name="form_tools_form_id" value="1">
+            <input type="hidden" name="form_tools_form_id" value="4" />
           <div
             class="w-[90%] lg:w-[70%] px-4 py-4 mt-5 lg:mt-10 rounded-xl bg-clip-padding backdrop-filter backdrop-blur-[4px] text-amber-600 text-[1rem] leading-[1rem] lg:text-2xl transition-all duration-500 group font-bold border-2 border-indigo-300 focus-within:text-yellow-600 focus-within:text-sm lg:focus-within:text-xl focus-within:ring-2 focus-within:ring-indigo-600 focus-within:bg-gray-800 focus-within:border-indigo-400"
           >
@@ -130,6 +129,7 @@
             <input
               type="text"
               required
+              name="fname"
               class="w-full rounded-lg mt-2 lg:mt-6 bg-slate-700 text-white text-sm px-2 py-1 lg:px-4 lg:py-2 lg:text-lg font-extralight border-none outline-none"
             />
           </div>
@@ -145,6 +145,7 @@
             <input
               type="text"
               required
+              name="lname"
               class="w-full rounded-lg mt-2 lg:mt-6 bg-slate-700 text-white text-sm px-2 py-1 lg:px-4 lg:py-2 lg:text-lg font-extralight border-none outline-none"
             />
           </div>
@@ -158,8 +159,9 @@
               How shall we reach you?
             </div>
             <input
-              type="text"
+              type="email"
               required
+              name="email"
               class="w-full rounded-lg mt-2 lg:mt-6 bg-slate-700 text-white text-sm px-2 py-1 lg:px-4 lg:py-2 lg:text-lg font-extralight border-none outline-none"
             />
           </div>
@@ -178,6 +180,7 @@
               minlength="10"
               inputmode="numeric"
               required
+              name="wa_number"
               class="w-full rounded-lg mt-2 lg:mt-6 bg-slate-700 text-white text-sm px-2 py-1 lg:px-4 lg:py-2 lg:text-lg font-extralight border-none outline-none"
             />
           </div>
@@ -193,6 +196,7 @@
             <input
               type="text"
               required
+              name="college"
               class="w-full rounded-lg mt-2 lg:mt-6 bg-slate-700 text-white text-sm px-2 py-1 lg:px-4 lg:py-2 lg:text-lg font-extralight border-none outline-none"
             />
           </div>
@@ -208,6 +212,7 @@
             <div class="sm:flex-row flex flex-col sm:gap-x-4 gap-y-2">
               <select
                 required
+                name="year"
                 class="w-full rounded-lg mt-2 lg:mt-6 bg-slate-700 text-white text-sm px-2 py-1 lg:px-4 lg:py-2 lg:text-lg font-extralight border-none outline-none"
               >
                 <option value="">Select Year</option>
@@ -218,6 +223,7 @@
               </select>
               <select
                 required
+                name="level"
                 class="w-full rounded-lg mt-2 lg:mt-6 bg-slate-700 text-white text-sm px-2 py-1 lg:px-4 lg:py-2 lg:text-lg font-extralight border-none outline-none"
               >
                 <option value="">Select Semester</option>
@@ -244,6 +250,7 @@
             <input
               type="text"
               required
+              name="txn_no"
               placeholder="Enter Transaction ID"
               class="w-full rounded-lg bg-slate-700 text-white text-sm px-2 py-1 lg:px-4 lg:py-2 lg:text-lg font-extralight border-none outline-none"
             />
