@@ -117,9 +117,9 @@
           <form action="https://bijit.xyz/form/process.php" method="post" class="flex flex-col items-center justify-center  w-full">
             <input type="hidden" name="form_tools_initialize_form" value="1">
             <input type="hidden" name="form_tools_form_id" value="1">
-          <div
-            class="w-[90%] lg:w-[70%] px-4 py-4 mt-5 lg:mt-10 rounded-xl bg-clip-padding backdrop-filter backdrop-blur-[4px] text-amber-600 text-[1rem] leading-[1rem] lg:text-2xl transition-all duration-500 group font-bold border-2 border-indigo-300 focus-within:text-yellow-600 focus-within:text-sm lg:focus-within:text-xl focus-within:ring-2 focus-within:ring-indigo-600 focus-within:bg-gray-800 focus-within:border-indigo-400"
-          >
+            <div
+              class="w-[90%] lg:w-[70%] px-4 py-4 mt-5 lg:mt-10 rounded-xl bg-clip-padding backdrop-filter backdrop-blur-[4px] text-amber-600 text-[1rem] leading-[1rem] lg:text-2xl transition-all duration-500 group font-bold border-2 border-indigo-300 focus-within:text-yellow-600 focus-within:text-sm lg:focus-within:text-xl focus-within:ring-2 focus-within:ring-indigo-600 focus-within:bg-gray-800 focus-within:border-indigo-400"
+            >
             First Name <span class="text-red-700">*</span>
             <div
               class="text-[0%] text-transparent italic font-normal translate-y-[-50%] group-focus-within:translate-y-0 group-focus-within:text-amber-600 group-focus-within:text-[0.6rem] group-focus-within:leading-[0.8rem] lg:group-focus-within:text-sm group-focus-within:h-3 h-0 transition-all duration-500"
@@ -129,6 +129,7 @@
             <input
               type="text"
               required
+              name="fname"
               class="w-full rounded-lg mt-2 lg:mt-6 bg-slate-700 text-white text-sm px-2 py-1 lg:px-4 lg:py-2 lg:text-lg font-extralight border-none outline-none"
             />
           </div>
@@ -144,6 +145,7 @@
             <input
               type="text"
               required
+              name="lname"
               class="w-full rounded-lg mt-2 lg:mt-6 bg-slate-700 text-white text-sm px-2 py-1 lg:px-4 lg:py-2 lg:text-lg font-extralight border-none outline-none"
             />
           </div>
@@ -157,8 +159,9 @@
               How shall we reach you?
             </div>
             <input
-              type="text"
+              type="email"
               required
+              name="email"
               class="w-full rounded-lg mt-2 lg:mt-6 bg-slate-700 text-white text-sm px-2 py-1 lg:px-4 lg:py-2 lg:text-lg font-extralight border-none outline-none"
             />
           </div>
@@ -177,6 +180,7 @@
               minlength="10"
               inputmode="numeric"
               required
+              name="wa_number"
               class="w-full rounded-lg mt-2 lg:mt-6 bg-slate-700 text-white text-sm px-2 py-1 lg:px-4 lg:py-2 lg:text-lg font-extralight border-none outline-none"
             />
           </div>
@@ -192,21 +196,23 @@
             <input
               type="text"
               required
+              name="college"
               class="w-full rounded-lg mt-2 lg:mt-6 bg-slate-700 text-white text-sm px-2 py-1 lg:px-4 lg:py-2 lg:text-lg font-extralight border-none outline-none"
             />
           </div>
           <div
             class="w-[90%] lg:w-[70%] px-4 py-4 mt-5 lg:mt-10 rounded-xl bg-clip-padding backdrop-filter backdrop-blur-[4px] text-amber-600 text-[1rem] leading-[1rem] lg:text-2xl transition-all duration-500 group font-bold border border-indigo-300 focus-within:text-yellow-600 focus-within:text-sm lg:focus-within:text-xl focus-within:ring-2 focus-within:ring-indigo-600 focus-within:bg-gray-800 focus-within:border-indigo-400"
           >
-            Year and Semester <span class="text-red-700">*</span>
+            Semester and Level <span class="text-red-700">*</span>
             <div
               class="text-[0%] text-transparent italic font-normal translate-y-[-50%] group-focus-within:translate-y-0 group-focus-within:text-amber-600 group-focus-within:text-[0.6rem] group-focus-within:leading-[0.8rem] lg:group-focus-within:text-sm group-focus-within:h-3 h-0 transition-all duration-500"
             >
-              Which year and semester do you study in?
+              Which semester do you study in?
             </div>
             <div class="sm:flex-row flex flex-col sm:gap-x-4 gap-y-2">
               <select
                 required
+                name="year"
                 class="w-full rounded-lg mt-2 lg:mt-6 bg-slate-700 text-white text-sm px-2 py-1 lg:px-4 lg:py-2 lg:text-lg font-extralight border-none outline-none"
               >
                 <option value="">Select Year</option>
@@ -217,11 +223,12 @@
               </select>
               <select
                 required
+                name="level"
                 class="w-full rounded-lg mt-2 lg:mt-6 bg-slate-700 text-white text-sm px-2 py-1 lg:px-4 lg:py-2 lg:text-lg font-extralight border-none outline-none"
               >
-                <option value="">Select Semester</option>
-                <option value="first">1st Semester</option>
-                <option value="Second">2nd Semester</option>
+                <option value="">Graduation Level</option>
+                <option value="ug">UG</option>
+                <option value="pg">PG</option>
               </select>
             </div>
           </div>
@@ -244,6 +251,7 @@
               type="text"
               required
               placeholder="Enter Transaction ID"
+              name="txn_no"
               class="w-full rounded-lg bg-slate-700 text-white text-sm px-2 py-1 lg:px-4 lg:py-2 lg:text-lg font-extralight border-none outline-none"
             />
           </div>
