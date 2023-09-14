@@ -61,3 +61,23 @@ function showupiModal() {
   }
 }
 
+function copyToClipboard(text) {
+    const textArea = document.createElement('textarea');
+    textArea.value = text;
+
+    // Append the text area to the document
+    document.body.appendChild(textArea);
+
+    // Select the text in the text area
+    textArea.select();
+
+    try {
+      // Copy the selected text to the clipboard
+      document.execCommand('copy');
+    } catch (err) {
+      console.error('Unable to copy to clipboard: ', err);
+    }
+
+    // Remove the text area from the document
+    document.body.removeChild(textArea);
+  }

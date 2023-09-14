@@ -203,11 +203,11 @@
           <div
             class="w-[90%] lg:w-[70%] px-4 py-4 mt-5 lg:mt-10 rounded-xl bg-clip-padding backdrop-filter backdrop-blur-[4px] text-amber-600 text-[1rem] leading-[1rem] lg:text-2xl transition-all duration-500 group font-bold border border-indigo-300 focus-within:text-yellow-600 focus-within:text-sm lg:focus-within:text-xl focus-within:ring-2 focus-within:ring-indigo-600 focus-within:bg-gray-800 focus-within:border-indigo-400"
           >
-            Year and Semester <span class="text-red-700">*</span>
+            Year and Level <span class="text-red-700">*</span>
             <div
               class="text-[0%] text-transparent italic font-normal translate-y-[-50%] group-focus-within:translate-y-0 group-focus-within:text-amber-600 group-focus-within:text-[0.6rem] group-focus-within:leading-[0.8rem] lg:group-focus-within:text-sm group-focus-within:h-3 h-0 transition-all duration-500"
             >
-              Which year and semester do you study in?
+              Which year do you study in?
             </div>
             <div class="sm:flex-row flex flex-col sm:gap-x-4 gap-y-2">
               <select
@@ -226,9 +226,9 @@
                 name="level"
                 class="w-full rounded-lg mt-2 lg:mt-6 bg-slate-700 text-white text-sm px-2 py-1 lg:px-4 lg:py-2 lg:text-lg font-extralight border-none outline-none"
               >
-                <option value="">Select Semester</option>
-                <option value="first">1st Semester</option>
-                <option value="Second">2nd Semester</option>
+                <option value="">Select Level</option>
+                <option value="ug">PG</option>
+                <option value="pg">UG</option>
               </select>
             </div>
           </div>
@@ -237,10 +237,12 @@
           >
           <div class="flex w-full mb-2 justify-between">
             <div>
-            <div>Make Payment <span class="text-red-700">*</span></div>
+            <div>Make Payment (₹50)<span class="text-red-700">*</span></div>
               <div
               class="text-[0.6rem] leading-[0.8rem] italic font-normal text-amber-600 lg:text-sm">
-              <a href="upi://pay?pa=bijit-fave@idfcbank&amp;&am=50&amp;&tn=nirdesh registration&amp;=BIJIT MONDAL &amp;cu=INR" class="text-red-700 hover:underline font-extrabold">Click here to pay</a> or click the QR Code to expand and scan
+              <span
+                    onclick="copyToClipboard('bijit-fave@idfcbank')"
+                    class="text-cyan-700 font-extrabold">bijit-fave@idfcbank</span> or click the QR Code to expand and scan
             </div>
           </div>
             <div onclick="showupiModal()" class="upi-qr bg-white h-6 w-6 sm:h-10 sm:w-10 md:h-14 md:w-14 hover:scale-110 transition-all duration-300 hover:cursor-pointer">
