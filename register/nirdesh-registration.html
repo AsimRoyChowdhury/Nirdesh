@@ -24,6 +24,9 @@
 
   </head>
   <body class="bg-gray-800">
+    <div id="loader" class="w-full h-[100vh] flex item-center justify-center fixed z-50 bg-gray-800">
+      <lottie-player class="mx-auto my-auto w-[60%] sm:w-[40%]" src="/assets/nirdes loading.json" background="transparent"  speed="0.8" loop autoplay></lottie-player>
+    </div>
     <div id="particles-js"></div>
     <div id="notice-modal" class="blurred-in flex z-10 w-full h-screen fixed ">
       <div class="scale-up-center flex flex-col max-h-[30rem] bg-gray-300 mx-auto my-auto w-[75%] sm:w-[50%] rounded-xl py-4 px-8 overflow-y-auto">
@@ -99,7 +102,7 @@
             class="text-gray-400 opacity-30 text-[0.5rem] leading-[1rem]"
             style="margin: 1vw; font-family: 'Open Sans'"
           >
-            xx/08/23
+            07/10/23
           </div>
         </div>
         <div class="w-full flex flex-col justify-center items-center p-3">
@@ -115,7 +118,7 @@
               Nirdeshians Register Yourself for the ultimate coding challenge
             </div>
           </div>
-          <form action="https://bijit.xyz/form/process.php" method="post" class="flex flex-col items-center justify-center  w-full">
+          <form onsubmit="return checkNumber()" action="https://bijit.xyz/form/process.php" method="post" class="flex flex-col items-center justify-center  w-full">
             <input type="hidden" name="form_tools_form_id" value="4" />
           <div
             class="w-[90%] lg:w-[70%] px-4 py-4 mt-5 lg:mt-10 rounded-xl bg-clip-padding backdrop-filter backdrop-blur-[4px] text-amber-600 text-[1rem] leading-[1rem] lg:text-2xl transition-all duration-500 group font-bold border-2 border-indigo-300 focus-within:text-yellow-600 focus-within:text-sm lg:focus-within:text-xl focus-within:ring-2 focus-within:ring-indigo-600 focus-within:bg-gray-800 focus-within:border-indigo-400"
@@ -172,12 +175,12 @@
             <div
               class="text-[0%] text-transparent italic font-normal translate-y-[-50%] group-focus-within:translate-y-0 group-focus-within:text-amber-600 group-focus-within:text-[0.6rem] group-focus-within:leading-[0.8rem] lg:group-focus-within:text-sm group-focus-within:h-3 h-0 transition-all duration-500"
             >
-              How shall we reach you on Whatsapp
+              How shall we reach you on Whatsapp?
             </div>
             <input
-              type="number"
-              maxlength="10"
-              minlength="10"
+              id="phone-number"
+              type="text"
+              length="10"
               inputmode="numeric"
               required
               name="wa_number"
