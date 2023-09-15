@@ -7,3 +7,9 @@ function openNirdesh(){
 function openEureka(){
 	window.open("http://nirdesh.ilib.website/register/eureka-registration", "_self");
 }
+
+const loader = document.getElementById("loader");
+
+window.addEventListener("load", function() {
+	loader.style.display = "none";
+})

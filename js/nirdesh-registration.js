@@ -5,8 +5,11 @@ const body = document.querySelector("body");
 const upiModal = document.getElementById("upi-modal");
 const upiQR = document.querySelectorAll(".upi-qr");
 
-console.log(upiQR[2]);
-
+// function checkNumber(){
+// 	const phoneNumber = document.getElementById("phone-number");
+// 	console.log(phoneNumber.value);
+// 	// if(phoneNumber.textContent)
+// }
 if(!noticeModal.classList.contains("hidden")){
 	noticeModal.firstElementChild.classList.remove("scale-down-center");
 	noticeModal.classList.remove("blurred-out");
@@ -81,3 +84,9 @@ function copyToClipboard(text) {
     // Remove the text area from the document
     document.body.removeChild(textArea);
   }
+
+const loader = document.getElementById("loader");
+
+window.addEventListener("load", function() {
+  loader.style.display = "none";
+})

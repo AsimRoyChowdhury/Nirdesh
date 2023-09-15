@@ -24,6 +24,9 @@
 
 </head>
 <body class="bg-gray-800 flex flex-col min-h-screen">
+	<div id="loader" class="w-full h-[100vh] flex item-center justify-center fixed z-50 bg-gray-800">
+		<lottie-player class="mx-auto my-auto w-[60%] sm:w-[40%]" src="/assets/nirdes loading.json" background="transparent"  speed="0.8" loop autoplay></lottie-player>
+	</div>
 	<div id="particles-js"></div>
 	<div class="flex w-full h-full flex-grow">
 		<div
@@ -217,6 +220,12 @@
 
 	<script>
 		particlesJS("particles-js", particleConfig);
+
+		const loader = document.getElementById("loader");
+
+		window.addEventListener("load", function() {
+			loader.style.display = "none";
+		})
 	</script>
 </body>
 </html>
