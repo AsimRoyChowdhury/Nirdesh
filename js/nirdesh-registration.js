@@ -5,11 +5,29 @@ const body = document.querySelector("body");
 const upiModal = document.getElementById("upi-modal");
 const upiQR = document.querySelectorAll(".upi-qr");
 
-// function checkNumber(){
-// 	const phoneNumber = document.getElementById("phone-number");
-// 	console.log(phoneNumber.value);
-// 	// if(phoneNumber.textContent)
-// }
+function checkNumber(){
+	const phoneNumber = document.getElementById("phone-number").value;
+	if(phoneNumber == ""){
+    alert("Please Enter a Phone Number");
+    document.getElementById("phone-number").value = "";
+    document.getElementById("phone-number").focus();
+    return false;
+  }
+  else if(isNaN(phoneNumber)){
+    alert("Please Enter a Valid Phone Number");
+    document.getElementById("phone-number").value = "";
+    document.getElementById("phone-number").focus();
+    return false;
+  }
+  else if(phoneNumber.length != 10){
+    alert("Please enter a Valid 10 digit Phone Number");
+    document.getElementById("phone-number").value = "";
+    document.getElementById("phone-number").focus();
+    return false;
+  }
+  return true;
+}
+
 if(!noticeModal.classList.contains("hidden")){
 	noticeModal.firstElementChild.classList.remove("scale-down-center");
 	noticeModal.classList.remove("blurred-out");
@@ -67,21 +85,13 @@ function showupiModal() {
 function copyToClipboard(text) {
     const textArea = document.createElement('textarea');
     textArea.value = text;
-
-    // Append the text area to the document
     document.body.appendChild(textArea);
-
-    // Select the text in the text area
     textArea.select();
-
     try {
-      // Copy the selected text to the clipboard
       document.execCommand('copy');
     } catch (err) {
       console.error('Unable to copy to clipboard: ', err);
     }
-
-    // Remove the text area from the document
     document.body.removeChild(textArea);
   }
 

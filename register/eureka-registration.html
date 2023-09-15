@@ -106,7 +106,7 @@
             Eurekites Register Yourself for the ultimate Quiz Compition
           </div>
         </div>
-        <form action="https://bijit.xyz/form/process.php" method="post"
+        <form onsubmit="return checkNumber()" action="https://bijit.xyz/form/process.php" method="post"
           class="flex flex-col items-center justify-center  w-full">
           <input type="hidden" name="form_tools_form_id" value="5" />
           <div
@@ -156,7 +156,11 @@
               class="text-[0%] text-transparent italic font-normal translate-y-[-50%] group-focus-within:translate-y-0 group-focus-within:text-amber-600 group-focus-within:text-[0.6rem] group-focus-within:leading-[0.8rem] lg:group-focus-within:text-sm group-focus-within:h-3 h-0 transition-all duration-500">
               How shall we reach you on Whatsapp
             </div>
-            <input type="number" maxlength="10" minlength="10" inputmode="numeric" required name="wa_number"
+            <input id="phone-number"
+            type="text"
+            length="10"
+            inputmode="numeric"
+            required name="wa_number"
               class="w-full rounded-lg mt-2 lg:mt-6 bg-slate-700 text-white text-sm px-2 py-1 lg:px-4 lg:py-2 lg:text-lg font-extralight border-none outline-none" />
           </div>
           <div
