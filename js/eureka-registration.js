@@ -95,6 +95,6 @@ function copyToClipboard(text) {
   document.body.removeChild(textArea);
 }
 const loader = document.getElementById("loader");
-window.addEventListener("load", function() {
-  loader.style.display = "none";
-})
+window.onload = function(){
+	loader.style.display = "none";
+}

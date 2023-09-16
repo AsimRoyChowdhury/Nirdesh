@@ -10,6 +10,7 @@ function openEureka(){
 
 const loader = document.getElementById("loader");
 
-window.addEventListener("load", function() {
+
+window.onload = function(){
 	loader.style.display = "none";
-})
+}
