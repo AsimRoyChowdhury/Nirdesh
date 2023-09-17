@@ -19,6 +19,8 @@
       @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
     </style>
 
+  
+<script src="./js/libraries/lottie.js"></script>
 <script src="./js/libraries/particlecdn.js"></script>
 <script defer src="./js/libraries/prism.js"></script>
 <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
@@ -28,6 +30,9 @@
 
 <body class="bg-slate-800">
   <div id="particles-js"></div>
+  <div id="loader" class="w-full h-[100vh] flex item-center justify-center fixed z-50 bg-gray-800">
+    <lottie-player class="mx-auto my-auto w-[60%] sm:w-[40%]" src="/assets/nirdes loading.json" background="transparent"  speed="0.8" loop autoplay></lottie-player>
+  </div>
   <div  class="absolute z-10 w-full h-full items-center justify-center pb-10">
     <div id="hero-section" class="slide-in-blurred-bottom my-10 mx-auto" style="width: 90vw;">
       <div class=" flex-col w-full h-full pb-1 sm:pb-6 items-center justify-center  border-4 bg-slate-800 bg-opacity-80  border-blue-400 shadow-blue-400 sm:rounded-2xl rounded-lg ">

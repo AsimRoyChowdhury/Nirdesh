@@ -1,6 +1,10 @@
-// import Swiper from 'swiper';
-
 particlesJS("particles-js", particleConfig);
+
+const loader = document.getElementById("loader");
+
+window.onload = function(){
+  loader.style.display = "none";
+}
 
 const linesOfCode = [
   'package org.rkmvcc.nirdesh',
