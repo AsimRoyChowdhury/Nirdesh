@@ -12,10 +12,11 @@
   <meta property="og:url" content="https://nirdesh.ilib.website/" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://bijit.xyz/cockpit-master/storage/uploads/2023/09/17/Encoded_uid_6506b919a77bf.png" />
+  <link rel="icon" type="image/x-icon" href="../assets/nirdesh_favicon.png">
   <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/libraries/flip.css">
   <script src="./js/libraries/tailwindcss.js"></script>
   <link rel="stylesheet" href="./css/libraries/prism.css"/>
-  <link rel="stylesheet" href="./css/main.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=JetBrains+Mono&display=swap"
@@ -24,30 +25,63 @@
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
     </style>
+
+<script src="./js/libraries/particlecdn.js"></script>
+<script defer src="./js/libraries/prism.js"></script>
+<script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+<script src="./js/libraries/particle.js"></script>
+<script src="./js/libraries/flip.js"></script>
 </head>
 
 <body class="bg-slate-800">
   <div id="particles-js"></div>
   <div  class="absolute z-10 w-full h-full items-center justify-center pb-10">
-    <!-- <div class="sayan w-full h-full" id="particles-js">
-    </div> -->
     <div id="hero-section" class="slide-in-blurred-bottom my-10 mx-auto" style="width: 90vw;">
       <div class=" flex-col w-full h-full pb-1 sm:pb-6 items-center justify-center  border-4 bg-slate-800 bg-opacity-80  border-blue-400 shadow-blue-400 sm:rounded-2xl rounded-lg ">
-        <div class="w-full mb-2 sm:mb-10 justify-between flex h-auto bg-gray-600 sm:rounded-t-xl rounded-t-sm">
-          <div class="flex">
-            <svg class="sm:w-4 w-3" style="margin: 1vw" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="26" cy="26" r="26" fill="#FF4747"/>
-              </svg>
-            <svg class="sm:w-4 w-3" style="margin-right: 1vw" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="26" cy="26" r="26" fill="#FFCC47"/>
-              </svg>
-            <svg class="sm:w-4 w-3" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="26" cy="26" r="26" fill="#47FF5A"/>
-              </svg>
-          </div>
-            <div class="text-gray-400 sm:text-lg text-xs" style="margin: 1vw; font-family: 'Open Sans';">rkmvcc/terminal/cc</div>
-            <div class="text-gray-400 opacity-30 text-xs" style=" margin: 1vw; font-family: 'Open Sans';">xx/08/23</div>
-        </div>
+        <div
+	class="w-full mb-2 sm:mb-4 justify-between flex h-auto bg-gray-600 sm:rounded-t-xl rounded-t-sm"
+>
+	<div class="flex">
+		<svg
+			class="sm:w-[1.2vw] w-2"
+			style="margin: 1vw"
+			viewBox="0 0 52 52"
+			fill="none"
+			xmlns="http://www.w3.org/2000/svg"
+		>
+			<circle cx="26" cy="26" r="26" fill="#FF4747" />
+		</svg>
+		<svg
+			class="sm:w-[1.2vw] w-2"
+			style="margin-right: 1vw"
+			viewBox="0 0 52 52"
+			fill="none"
+			xmlns="http://www.w3.org/2000/svg"
+		>
+			<circle cx="26" cy="26" r="26" fill="#FFCC47" />
+		</svg>
+		<svg
+			class="sm:w-[1.2vw] w-2"
+			viewBox="0 0 52 52"
+			fill="none"
+			xmlns="http://www.w3.org/2000/svg"
+		>
+			<circle cx="26" cy="26" r="26" fill="#47FF5A" />
+		</svg>
+	</div>
+	<div
+		class="text-gray-400 sm:text-[1.1vw] text-[0.6rem] leading-[1rem] list-image-none"
+		style="margin: 1vw; font-family: 'Open Sans'"
+	>
+		rkmvcc/terminal/nirdesh
+	</div>
+	<div
+		class="text-gray-400 opacity-30 text-[1.2vw] leading-[1rem] sm:text-[0.8vw] sm:leading-[1rem]"
+		style="margin: 1vw; font-family: 'Open Sans'"
+	>
+		07/10/23
+	</div>
+</div>
             <div class="w-fit">
               <div id="initial-code-1" class="code-text flex-wrap flex mb-4 sm:mb-6 text-indigo-500"
                 style="font-family: 'JetBrains Mono', monospace;"></div>
@@ -61,18 +95,9 @@
                 style="font-family: 'JetBrains Mono', monospace;"></div>
           </div>
         <div id="nirdesh-writing" class="hidden flex mb-2 w-full h-full items-center justify-center">
-          <svg class="brackets" viewBox="0 0 234 668" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M200 34H166.667C148.986 34 132.029 41.0238 119.526 53.5262C107.024 66.0286 100 82.9856 100 100.667V267.333C100 285.014 92.9764 301.971 80.4739 314.474C67.9715 326.976 51.0146 334 33.3335 334C51.0146 334 67.9715 341.024 80.4739 353.526C92.9764 366.029 100 382.986 100 400.667V567.333C100 585.014 107.024 601.971 119.526 614.474C132.029 626.976 148.986 634 166.667 634H200" stroke="#009DB3" stroke-width="40" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
           <span 
             class="nirdesh-heading text-transparent bg-clip-text bg-gradient-to-b from-pink-600 to-orange-500"
-            style="font-family: 'Plutur';">NIRDESH</span>
-          <svg class="brackets" viewBox="0 0 234 668" fill="none"
-            xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M33.3338 634H66.6672C84.3483 634 101.305 626.976 113.808 614.474C126.31 601.971 133.334 585.014 133.334 567.333L133.334 400.667C133.334 382.986 140.358 366.029 152.86 353.526C165.362 341.024 182.319 334 200 334C182.319 334 165.362 326.976 152.86 314.474C140.358 301.971 133.334 285.014 133.334 267.333V100.667C133.334 82.9856 126.31 66.0287 113.808 53.5262C101.305 41.0238 84.3483 34 66.6672 34H33.3338"
-              stroke="#009DB3" stroke-width="40" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
+            style="font-family: 'Plutur';">&lt; NIRDESH &gt;</span>
         </div>
         <div  id="one-liner-1" class="hidden w-full flex justify-center my-2 items-center px-4">
           <div class="bg-white w-fit text-center border-4 border-x-blue-700 border-y-orange-500 rounded-xl px-2 sm:py-1">
@@ -101,73 +126,295 @@
               <div class="terminal-code-text text-white text-left ml-2">(C) 2023 Ramakrishna Mission Vivekananda Centenary College. All rights reserved</div>
               <div class="terminal-code-text text-white text-left ml-2 mt-8">C:\nirdesh\computerscience23></div>
             <div
-              class="text-transparent bg-clip-text bg-gradient-to-b from-red-600 to-blue-500 px-6 pb-2 text-lg lg:text-2xl"
+              class="text-transparent bg-clip-text bg-gradient-to-b from-red-600 to-blue-500 px-6 pb-2 text-lg lg:text-2xl flex flex-col"
               style="font-family: 'Josefin Sans';">Organised by<div class="animate-charcter text-xl lg:text-4xl sm:text-2xl">Ramakrishna Mission Vivekananda Centenary College</div></div>
           </div>
         </div>
       </div>
     </div>
-    <div id="fixed-div" class="relative bg-gray-700 hidden w-full h-full flex">
-      <img id="coding-image" class="absolute z-[-1] object-cover opacity-50" style="height: 100vh; width: 100vw;" src="./assets/coding-bg.jpg " alt="">
+    <div id="fixed-div" class="relative justify-center hidden w-full h-full flex">
+      
       <div id="about-us-section" class="relative w-full h-full overflow-hidden justify-items-center align-middle">
         <img id="image" class="absolute z-[-1] object-cover " style="height: 100vh; width: 100vw;" src="./assets/about_us_bg.jpg " alt="">
         <div class="flex flex-col mx-auto text-center">
           <div id="about-us" 
                 class="z-10 hidden justify-center about-us text-white uppercase"
                 style="font-family: 'nusar';">About Us</div>
-          <div id="about-us-para" class="z-10 about-us-para text-center hidden mx-auto text-xs sm:text-sm lg:text-lg lg:w-[500px] sm:w-[350px] w-[250px] justify-center text-white">Join "Nirdesh," the coding competition at Ramakrishna Mission Vivekananda Centenary College! Open to all college students, it features challenging rounds and exciting prizes for the winners. Unleash your coding skills and be part of this innovative event that celebrates talent and fosters healthy competition. Don't miss the chance to showcase your abilities and win big at Nirdesh!</div>
+          <div id="about-us-para" class="flex z-10 about-us-para text-center hidden mx-auto text-xs sm:text-sm lg:text-[1.5vw] lg:leading-[2vw] lg:w-[40vw] sm:w-[350px] w-[250px] justify-center text-white">Join "Nirdesh," the coding competition at Ramakrishna Mission Vivekananda Centenary College! Open to all college students, it features challenging rounds and exciting prizes for the winners. Unleash your coding skills and be part of this innovative event that celebrates talent and fosters healthy competition. Don't miss the chance to showcase your abilities and win big at Nirdesh!</div>
         </div>
       </div>
-      <div id="timeline" class="hidden flex-col sm:m-16 m-4 w-full pb-1 sm:pb-6 items-center justify-center  border-4 bg-slate-800 bg-opacity-80  border-blue-400 shadow-blue-400 sm:rounded-2xl rounded-lg ">
-        <div class="w-full mb-2 sm:mb-4 justify-between flex h-auto bg-gray-600 sm:rounded-t-xl rounded-t-sm">
-          <div class="flex">
-            <svg class="sm:w-4 w-3" style="margin: 1vw" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="26" cy="26" r="26" fill="#FF4747"/>
-              </svg>
-            <svg class="sm:w-4 w-3" style="margin-right: 1vw" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="26" cy="26" r="26" fill="#FFCC47"/>
-              </svg>
-            <svg class="sm:w-4 w-3" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="26" cy="26" r="26" fill="#47FF5A"/>
-              </svg>
-          </div>
-            <div class="text-gray-400 sm:text-lg text-xs" style="margin: 1vw; font-family: 'Open Sans';">rkmvcc/terminal/cc</div>
-            <div class="text-gray-400 opacity-30 text-xs" style=" margin: 1vw; font-family: 'Open Sans';">xx/08/23</div>
+      <div
+      id="timeline"
+      class="flex hidden flex-col sm:m-2 m-4 w-[95%] pb-1 sm:pb-6 border-4 bg-slate-800 bg-opacity-80 border-blue-400 shadow-blue-400 sm:rounded-2xl rounded-lg"
+    >
+	<div
+	class="w-full mb-2 sm:mb-4 justify-between flex h-auto bg-gray-600 sm:rounded-t-xl rounded-t-sm"
+>
+	<div class="flex">
+		<svg
+			class="sm:w-[1.2vw] w-2"
+			style="margin: 1vw"
+			viewBox="0 0 52 52"
+			fill="none"
+			xmlns="http://www.w3.org/2000/svg"
+		>
+			<circle cx="26" cy="26" r="26" fill="#FF4747" />
+		</svg>
+		<svg
+			class="sm:w-[1.2vw] w-2"
+			style="margin-right: 1vw"
+			viewBox="0 0 52 52"
+			fill="none"
+			xmlns="http://www.w3.org/2000/svg"
+		>
+			<circle cx="26" cy="26" r="26" fill="#FFCC47" />
+		</svg>
+		<svg
+			class="sm:w-[1.2vw] w-2"
+			viewBox="0 0 52 52"
+			fill="none"
+			xmlns="http://www.w3.org/2000/svg"
+		>
+			<circle cx="26" cy="26" r="26" fill="#47FF5A" />
+		</svg>
+	</div>
+	<div
+		class="text-gray-400 sm:text-[1.1vw] text-[0.6rem] leading-[1rem] list-image-none"
+		style="margin: 1vw; font-family: 'Open Sans'"
+	>
+		rkmvcc/terminal/nirdesh
+	</div>
+	<div
+		class="text-gray-400 opacity-30 text-[1.2vw] leading-[1rem] sm:text-[0.8vw] sm:leading-[1rem]"
+		style="margin: 1vw; font-family: 'Open Sans'"
+	>
+		07/10/23
+	</div>
+</div>
+      <div
+        id="timeline-display"
+        class="w-full h-full flex flex-col"
+      >
+        <div
+          id="coding-blueprint-heading"
+          class="mx-auto w-fit font-[Plutur] text-lg sm:text-2xl lg:text-4xl xl:text-5xl tracking-[0.5vw] px-4 text-orange-500 rounded-xl border-4 border-orange-500 bg-white text-center uppercase font-bold"
+        >
+          &lt; The coding blueprint &gt;
         </div>
-        <div id="timeline-display" class="w-full flex flex-col justify-center items-center">
-          <div id="coding-blueprint-heading" class="mx-auto w-fit px-4 text-orange-500 rounded-xl  border-4 border-orange-500 bg-white text-center uppercase">The coding blueprint</div>
-          <div id="coding-blueprint-sub-heading" class="text-white text-center uppercase mt-2">Get ready to dive into a one of kind tech journey</div>
-          <div class="w-[60vw] mx-auto my-2 bg-yellow-400 h-1"></div>
-          <div class="w-[90vw] flex justify-center items-center mx-auto md:justify-around gap-8 md:gap-0 overflow-x-scroll md:overflow-x-visible md:h-auto">
-            <button class="text-center border-2 border-orange-700 bg-white p-2 rounded-md whitespace-nowrap uppercase text-orange-500 focus:border-white focus:text-white focus:bg-orange-700 transition-all ease-in-out focus:scale-110 duration-300 font-semibold font-open-sans">Nirdesh Announcement</button>
-            <button class="text-center border-2 border-orange-700 bg-white p-2 rounded-md whitespace-nowrap uppercase text-orange-500 focus:border-white focus:text-white focus:bg-orange-700 transition-all ease-in-out focus:scale-110 duration-300 font-semibold font-open-sans">Registration starts</button>
-            <button class="text-center border-2 border-orange-700 bg-white p-2 rounded-md whitespace-nowrap uppercase text-orange-500 focus:border-white focus:text-white focus:bg-orange-700 transition-all ease-in-out focus:scale-110 duration-300 font-semibold font-open-sans">Registration ends</button>
-            <button class="text-center border-2 border-orange-700 bg-white p-2 rounded-md whitespace-nowrap uppercase text-orange-500 focus:border-white focus:text-white focus:bg-orange-700 transition-all ease-in-out focus:scale-110 duration-300 font-semibold font-open-sans">Kickoff</button>
-            <button class="text-center border-2 border-orange-700 bg-white p-2 rounded-md whitespace-nowrap uppercase text-orange-500 focus:border-white focus:text-white focus:bg-orange-700 transition-all ease-in-out focus:scale-110 duration-300 font-semibold font-open-sans">Final Day</button>
+        <div
+          id="coding-blueprint-sub-heading"
+          class="text-white text-center text-xs sm:text-sm lg:text-lg xl:text-2xl font-[Open Sans] font-bold uppercase mt-2 px-2"
+          style="text-shadow: 1px 2px #e58805"
+        >
+          Get ready to dive into a one of kind tech journey
+        </div>
+        <div class="w-[60vw] mx-auto my-2 bg-yellow-400 h-1"></div>
+        <div
+          class="m-4 w-[90%] h-[70%] self-center flex flex-col backdrop-blur-md rounded-2xl p-4 overflow-y-scroll text-white text-xs sm:text-sm lg:text-lg xl:text-xl" style="font-family: Source Code Pro;"
+        >
+		<pre>
+>
+>
+>
+C:\></pre>
+<span class="text-amber-500 font-bold sm:text-lg lg:text-xl xl:text-2xl">Nirdesh Announcement - 15.09.23</span>
+          <div class="w-[70%] sm:w-[50%] xl:w-[30%] flex items-center justify-center py-2">
+            <div class="tick w-full" data-did-init="nirdeshAnnouncement">
+              <div
+                class="w-3"
+                data-repeat="true"
+                data-layout="horizontal fit"
+                data-transform="preset(d, h, m, s) -> delay"
+              >
+                <div class="tick-group">
+                  <div
+                    data-key="value"
+                    data-repeat="true"
+                    data-transform="pad(00) -> split -> delay"
+                  >
+                    <span data-view="flip"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="m-4 w-[90vw] flex bg-sky-950 rounded p-4">
-            <div class="text-white"><pre>
-              #include &lt;iostream&gt;
-          
-              int main() {
-                  // Nirdesh Coding Competition Announcement
-                  // Date: 15th September
-          
-                  std::cout &lt;&lt; "The Nirdesh Coding Competition will be announced on 15th September." &lt;&lt; std::endl;
-          
-                  return 0;
-              }
-            </pre></div>
-          </div>
+        <pre>|</pre>
+          <span
+            >#include <span class="text-red-500">&lt;iostream&gt;</span></span
+          >
+          <span>#include <span class="text-red-500">&lt;string&gt;</span></span>
+          <span>using <span class="text-blue-500">namespace</span> std;</span>
+          <pre></pre>
+          <span>int main() {</span>
+          <span class="pl-4"
+            >string event =
+            <span class="text-green-500 font-bold"
+              >"Nirdesh Announcement"</span
+            >;</span
+          >
+          <span class="pl-4"
+            >string date =
+            <span class="text-green-500 font-bold"
+              >" 15 September 2023"</span
+            >;</span
+          >
+          <span class="pl-4"
+            ><span class="text-yellow-600">cout</span> &lt;&lt; event + " on " +
+            date;</span
+          >
+          <span class="pl-4">return 0;</span>
+          <span>}</span>
+          <pre>
+=========================================================
+>
+>
+>
+>
+>
+C:/></pre>
+<span class="text-amber-500 font-bold sm:text-lg lg:text-xl xl:text-2xl">Registration ends - 17.09.23</span>
+<div class="w-[70%] sm:w-[50%] xl:w-[30%] flex items-center justify-center py-2">
+	<div class="tick w-full" data-did-init="registrationStart">
+	  <div
+		class="w-3"
+		data-repeat="true"
+		data-layout="horizontal fit"
+		data-transform="preset(d, h, m, s) -> delay"
+	  >
+		<div class="tick-group">
+		  <div
+			data-key="value"
+			data-repeat="true"
+			data-transform="pad(00) -> split -> delay"
+		  >
+			<span data-view="flip"></span>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </div>
+  <pre>|</pre>
+  <span class="text-red-500">&lt;?php</span>
+<span>$event = <span class="text-green-500 font-bold ">"Nirdesh Registration Starts on "</span>;</span>
+
+<span><span class="text-blue-500">echo</span> <span class="text-green-500">"&lt;h2&gt;"</span> . $event . <span class="text-green-500">"&lt;/h2&gt;"</span>;</span>
+<span><span class="text-blue-500">echo</span> <span class="text-green-500 font-bold">"Date: 17-09-2023"</span>;</span>
+<span class="text-red-500">?&gt;</span>
+<pre>
+=========================================================
+>
+>
+>
+>
+>
+C:/></pre>
+<span class="text-amber-500 font-bold sm:text-lg lg:text-xl xl:text-2xl">Registration ends - 05.10.23</span>
+<div class="w-[70%] sm:w-[50%] xl:w-[30%] flex items-center justify-center py-2">
+	<div class="tick w-full" data-did-init="registrationEnd">
+	  <div
+		class="w-3"
+		data-repeat="true"
+		data-layout="horizontal fit"
+		data-transform="preset(d, h, m, s) -> delay"
+	  >
+		<div class="tick-group">
+		  <div
+			data-key="value"
+			data-repeat="true"
+			data-transform="pad(00) -> split -> delay"
+		  >
+			<span data-view="flip"></span>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </div>
+  <pre>|</pre>
+  <span><span class="text-blue-500">using</span> System;</span>
+
+ <span><span class="text-blue-500">namespace</span> MyApplication {</span>
+	<span><span class="text-blue-500 pl-4">class</span> Program {</span>
+	<span><span class="text-blue-500 pl-8">static void</span> Main(string[] args){</span>
+      <span class=" pl-12">Console.WriteLine(<span class="text-green-500 font-bold">"Nirdesh Registration Ends on 05-10-23"</span>);</span>
+    <span class="pl-8">}</span>
+	<span class="pl-4">}</span>
+<span>}</span>
+<pre>
+=========================================================
+>
+>
+>
+>
+>
+C:/></pre>
+	<span class="text-amber-500 font-bold sm:text-lg lg:text-xl xl:text-2xl">Contest Starts - 07.10.23 at 09:30 AM</span>
+	<div class="w-[70%] sm:w-[50%] xl:w-[30%] flex items-center justify-center py-2">
+		<div class="tick w-full" data-did-init="contestStarts">
+		  <div
+			class="w-3"
+			data-repeat="true"
+			data-layout="horizontal fit"
+			data-transform="preset(d, h, m, s) -> delay"
+		  >
+			<div class="tick-group">
+			  <div
+				data-key="value"
+				data-repeat="true"
+				data-transform="pad(00) -> split -> delay"
+			  >
+				<span data-view="flip"></span>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	  <pre>|</pre>
+	  <span><span class="text-purple-700">fn</span> <span class="text-blue-600">main</span>() {</span>
+		<span class="pl-4"><span class="text-purple-700">let</span> date = <span class="text-yellow-500 font-bold">07-10-23</span></span>
+		<span class="pl-4">//The fun begins</span>
+		<span class="pl-4"><span class="text-yellow-500">println!</span>(<span class="text-blue-600 font-bold">"Contest starts on - {}"</span>, date);</span>
+		<span>}</span>
+		<pre>
+=========================================================
+>
+>
+>
+>
+>
+C:/></pre>
+	<span class="text-amber-500 font-bold sm:text-lg lg:text-xl xl:text-2xl">Prize Distribution - 07.10.23 at 05:30 PM</span>
+	<div class="w-[70%] sm:w-[50%] xl:w-[30%] flex items-center justify-center py-2">
+		<div class="tick w-full" data-did-init="prizeDistribution">
+			<div
+			class="w-3"
+			data-repeat="true"
+			data-layout="horizontal fit"
+			data-transform="preset(d, h, m, s) -> delay"
+			>
+			<div class="tick-group">
+				<div
+				data-key="value"
+				data-repeat="true"
+				data-transform="pad(00) -> split -> delay"
+				>
+				<span data-view="flip"></span>
+				</div>
+			</div>
+			</div>
+		</div>
+		</div>
+		<pre>|</pre>
+<span>event <span class="text-yellow-600">=</span> <span class="font-bold text-green-500">"Prize Distribution"</span></span>
+<span>date <span class="text-yellow-600">=</span> <span class="font-bold text-green-500">"07-10-23"</span></span>
+<span>time <span class="text-yellow-600">=</span> <span class="font-bold text-green-500">"05:30 PM"</span></span>
+<span><span class="text-yellow-600">print</span>(event <span class="text-yellow-600">+</span> date <span class="text-yellow-600">+</span> time)</span>
         </div>
       </div>
     </div>
+    </div>
   </div>
+</div>
 
-<script src="./js/libraries/particlecdn.js"></script>
-<script defer src="./js/libraries/prism.js"></script>
-<script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
-<script src="./js/libraries/particle.js"></script>
 <script src="./js/script.js"></script>
 </body>
 </html>

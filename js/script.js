@@ -14,15 +14,14 @@ const linesOfCode = [
   '}'
 ];
 
+const codeText = document.querySelectorAll(".code-text");
+
 // Loop through each line of code
 linesOfCode.forEach((line, index) => {
-  const elementId = `initial-code-${index + 1}`;
-  const element = document.getElementById(elementId);
-  
-  // Create a new typewriter instance for each line of code element
+    // Create a new typewriter instance for each line of code element
 
   setTimeout(()=> {
-    const typewriter = new Typewriter(element, {
+    const typewriter = new Typewriter(codeText[index], {
       loop: false,
       delay: 0,
     });
@@ -34,53 +33,45 @@ linesOfCode.forEach((line, index) => {
         .callFunction(() => {
           setTimeout(() => {
             typewriter.pause();
-            const caretElement = element.querySelector('.Typewriter__cursor');
+            const caretElement = codeText[index].querySelector('.Typewriter__cursor');
             caretElement.style.display = 'none';
           }, 0);
         }, typewriter) // Pass the typewriter instance as the thisArg parameter
         .start();
     } else if(index<5) {
+
       setTimeout(() => typewriter
         .typeString(line)
         .pauseFor(500)
         .callFunction(() => {
           setTimeout(() => {
             typewriter.pause();
-            const caretElement = element.querySelector('.Typewriter__cursor');
+            const caretElement = codeText[index].querySelector('.Typewriter__cursor');
             caretElement.style.display = 'none';
           }, 0);
         }, typewriter) // Pass the typewriter instance as the thisArg parameter
         .start(), 500);
         
     } else {
+      
       setTimeout(() => typewriter
-        .typeString(line)
-        .pauseFor(1000)
-        .callFunction(() => {
-          setTimeout(() => {
-            typewriter.pause();
-            const caretElement = element.querySelector('.Typewriter__cursor');
-            caretElement.style.display = 'none';
-          }, 0);
-        }, typewriter) // Pass the typewriter instance as the thisArg parameter
-        .start(), 1000);
+      .typeString(line)
+      .pauseFor(1000)
+      .callFunction(() => {
+        setTimeout(() => {
+          typewriter.pause();
+          const caretElement = codeText[index].querySelector('.Typewriter__cursor');
+          caretElement.style.display = 'none';
+        }, 0);
+      }, typewriter) // Pass the typewriter instance as the thisArg parameter
+      .start(), 1000);
     }
   }, (1000 * index)+1000);
   
   
 });
 
-// const image = document.querySelector('#image');
-// const blurThreshold = 500; // Adjust this value to control the blur intensity
 
-// window.addEventListener('scroll', () => {
-//   // Calculate the blur value based on the scroll position
-//   const scrollPosition = window.scrollY;
-//   const blurValue = Math.min(scrollPosition / blurThreshold, 1);
-  
-//   // Apply the blur value to the div
-//   image.style.filter = `blur(${blurValue}px)`;
-// });
 const nirdeshWriting = document.querySelector('#nirdesh-writing');
 const oneLiner1 = document.querySelector('#one-liner-1');
 const oneLiner2 = document.querySelector('#one-liner-2');
@@ -98,19 +89,17 @@ delay(6000)
   .then(() => {
     oneLiner1.classList.remove("hidden");
     oneLiner1.classList.add("fade-in");
-    oneLiner1.scrollIntoView({ behavior: 'smooth' })
+    oneLiner1.scrollIntoView({ behavior: 'smooth' });
     return delay(3000);
   })
   .then(() => {
     oneLiner2.classList.remove("hidden");
     oneLiner2.classList.add("fade-in");
-    oneLiner2.scrollIntoView({ behavior: 'smooth' })
-    return delay(1000);
+    oneLiner2.scrollIntoView({ behavior: 'smooth' });
   })
   .then(() => {
     mainSection.classList.remove("hidden");
     mainSection.classList.add("fade-in");
-    mainSection.scrollIntoView({ behavior: 'smooth' });
     document.body.style.height = '800vh';
   });
   
@@ -136,69 +125,48 @@ window.addEventListener('scroll', function() {
   if (heroSection.getBoundingClientRect().bottom + 25 < 0) {
     fixedDiv.classList.add('fixed');        //Fixing the div so that it stays snapped to the viewport
     if(mediaQuerySmall.matches){           //Executes only if the screen width is less than 700px
-      if(blur < 4){
-        aboutUs.style.opacity = blur/4;
-        aboutUs.style.transform = "translateY(" + - blur + "vh)";
+      if(blur < 8){
+        aboutUs.style.opacity = blur/8;
+        aboutUs.style.transform = "translateY(" + - (blur) + "vh)";
         aboutUs.style.transition = "transform";
         aboutUs.style.transitionTimingFunction = "ease-in-out";
 
-        aboutUsPara.style.opacity = blur/4;
+        aboutUsPara.style.opacity = blur/8;
         aboutUsPara.style.transform = "translateY(" + (blur) + "vh)";
         aboutUsPara.style.transitionTimingFunction = "ease-in-out";
         aboutUsPara.style.transition = "all";
-
         image.style.filter = 'blur(' + blur + 'px)';
+        if(Math.pow(blur, (1/4)) > 1) image.style.scale = Math.pow(blur, (1/4));
 
         aboutUsPara.classList.remove("hidden");
+        aboutUs.classList.remove("hidden");
       } else if (blur > 12 && blur <= 20) {
-        aboutUs.style.opacity = 10/(blur);
-        aboutUs.style.transform = "translateY(" + - (blur - 8) + "vh)";
+        aboutUsSection.classList.remove('hidden');
+        timeline.classList.add('hidden');
+
+        aboutUs.style.opacity = 1/(blur - 11);
+        aboutUs.style.transform = "translateY(" + - (blur - 4) + "vh)";
         aboutUs.style.transitionTimingFunction = "ease-in-out";
         aboutUs.style.transition = "all";
 
-        aboutUsPara.style.opacity = 10/(blur);
-        aboutUsPara.style.transform = "translateY(" + (blur - 8) + "vh)";
+        aboutUsPara.style.opacity = 1/(blur - 11);
+        aboutUsPara.style.transform = "translateY(" + (blur - 4) + "vh)";
         aboutUsPara.style.transitionTimingFunction = "ease-in-out";
         aboutUsPara.style.transition = "all";
+
+        aboutUsSection.style.opacity = 1/(blur - 11);
 
         aboutUs.classList.remove("hidden");
-        aboutUsPara.classList.remove("hidden");
+        aboutUsPara.classList.remove("hidden");;
       } else if (blur > 20) {
+        timeline.classList.remove('hidden');
+        aboutUsSection.classList.add('hidden');
+        
+        timeline.style.opacity = (blur-20)/2 ;
+        
+        
         aboutUs.classList.add("hidden");
         aboutUsPara.classList.add("hidden");
-      } else {
-        aboutUs.classList.remove('hidden');
-        aboutUsPara.classList.remove('hidden');
-      }
-    } else if (mediaQueryMedium.matches){               //Executes when Screen width is greater than 700px and less than 800px
-      if(blur < 4){
-        aboutUs.style.opacity = blur/4;
-        aboutUs.style.transform = "translateY(" + - blur * 2 + "vh)";
-        aboutUs.style.transition = "transform";
-        aboutUs.style.transitionTimingFunction = "ease-in-out";
-
-        aboutUsPara.style.opacity = blur/4;
-        aboutUsPara.style.transform = "translateY(" + (blur * 2) + "vh)";
-        aboutUsPara.style.transitionTimingFunction = "ease-in-out";
-        aboutUsPara.style.transition = "all";
-
-        image.style.filter = 'blur(' + blur + 'px)';
-
-        aboutUsPara.classList.remove("hidden");
-        aboutUsPara.style.opacity = blur/2;
-      } else if (blur > 12 && blur <= 14) {
-        aboutUs.style.opacity = 10/(blur);
-        aboutUs.style.transform = "translateY(" + - (blur - 8) * 2 + "vh)";
-        aboutUs.style.transitionTimingFunction = "ease-in-out";
-        aboutUs.style.transition = "all";
-
-        aboutUsPara.style.opacity = 10/(blur);
-        aboutUsPara.style.transform = "translateY(" + (blur - 8) * 2 + "vh)";
-        aboutUsPara.style.transitionTimingFunction = "ease-in-out";
-        aboutUsPara.style.transition = "all";
-      } else if (blur > 14) {
-        aboutUs.classList.add("hidden");
-      aboutUsPara.classList.add("hidden");
       } else {
         aboutUs.classList.remove('hidden');
         aboutUsPara.classList.remove('hidden');
@@ -217,6 +185,7 @@ window.addEventListener('scroll', function() {
         aboutUsPara.style.transition = "all";
 
         image.style.filter = 'blur(' + blur + 'px)';
+        if(Math.pow(blur, (1/4)) > 1) image.style.scale = Math.pow(blur, (1/4));
 
         aboutUsPara.classList.remove("hidden");
         aboutUs.classList.remove("hidden");
@@ -253,6 +222,47 @@ window.addEventListener('scroll', function() {
   } else if (heroSection.getBoundingClientRect().bottom >= 0) {
     fixedDiv.classList.remove('fixed');
     aboutUsPara.classList.add("hidden");
+    aboutUs.classList.add("hidden");
   }
 
 });
+
+function nirdeshAnnouncement(tick) {
+	var counter = Tick.count.down('2023-09-15T00:00:00+05:30');
+
+	counter.onupdate = function(value) {
+	tick.value = value;
+	};
+}
+
+function registrationStart(tick) {
+	var counter = Tick.count.down('2023-09-17T00:00:00+05:30');
+
+	counter.onupdate = function(value) {
+	tick.value = value;
+	};
+}
+
+function registrationEnd(tick) {
+	var counter = Tick.count.down('2023-10-05T00:00:00+05:30');
+
+	counter.onupdate = function(value) {
+	tick.value = value;
+	};
+}
+
+function contestStarts(tick) {
+	var counter = Tick.count.down('2023-10-07T09:30:00+05:30');
+
+	counter.onupdate = function(value) {
+	tick.value = value;
+	};
+}
+
+function prizeDistribution(tick) {
+	var counter = Tick.count.down('2023-10-07T17:00:00+05:30');
+
+	counter.onupdate = function(value) {
+	tick.value = value;
+	};
+}
