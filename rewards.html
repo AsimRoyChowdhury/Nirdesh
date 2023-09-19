@@ -32,9 +32,9 @@
 		<lottie-player class="mx-auto my-auto w-[60%] sm:w-[40%]" src="/assets/nirdes loading.json" background="transparent"  speed="0.8" loop autoplay></lottie-player>
 	</div>
 	<div id="particles-js"></div>
-		<div class="flex w-full h-full flex-grow">
+		<div class="flex flex-col w-[100vw] overflow-hidden h-full items-center flex-grow">
 		<div
-			class="flex-col sm:m-16 m-4 w-full pb-1 sm:pb-6 items-center justify-center border-4 bg-slate-800 bg-opacity-80 border-blue-400 shadow-blue-400 sm:rounded-2xl rounded-lg h-fit"
+			class="flex-col sm:m-8 m-4 w-[90%] lg:w-[95%] pb-1 sm:pb-6 items-center justify-center border-4 bg-slate-800 bg-opacity-80 border-blue-400 shadow-blue-400 sm:rounded-2xl rounded-lg h-fit"
 		>
 			<div
 				class="w-full mb-2 sm:mb-4 justify-between flex h-auto bg-gray-600 sm:rounded-t-xl rounded-t-sm"
@@ -80,7 +80,7 @@
 					xx/08/23
 				</div>
 			</div>
-			<div class="flex justify-center py-12 text-sm px-6 gap-8 relative text-gray-50 sm:scale-150 sm:py-36 overflow-hidden"
+			<div class="flex justify-center py-12 text-sm px-6 gap-8 relative text-gray-50 sm:scale-150 sm:py-20 overflow-hidden"
 				style="font-family: 'MuseoModerno'; font-weight: 700;"
 			>
 				<div class="flex flex-col items-center group gap-1 relative">
@@ -101,19 +101,29 @@
 					<img src="./assets/rewards/3rdprize.svg" class="h-3" alt="">
 					<img src="./assets/rewards/conferrati.svg" alt="" class="absolute translate-y-10 w-[80%] -z-10 group-hover:scale-[180%] transition-all ease-linear"> 
 				</div>
-                <img class="w-14 absolute top-8 sm:translate-y-24" src="./assets/rewards/crown.svg" alt="2nd"> 
+                <img class="w-14 absolute top-8 sm:translate-y-8" src="./assets/rewards/crown1st.svg" alt="1st"> 
             </div>
-			<div class="text-center text-[0.5rem] text-gray-50"
+			<div class="text-center flex flex-col sm:flex-row justify-center sm:gap-6 text-[0.5rem] text-gray-50"
 				style="font-family: 'MuseoModerno'; font-weight: 100;"
 			>
-				Cash prize is for the whole team, not individual members
+				<div>
+					*Both UG and PG students can apply
+				</div>
+				<div>
+					*Nirdesh and EUREKA winners will get separate cash prizes
+				</div>
+				<div>
+					*Nirdesh: cash prize is for individual winners
+				</div>
+				<div>
+					*EUREKA: cash prize is for individual teams
+				</div>
 			</div>
 		</div>
-	</div>
-	<footer 
+		<footer 
 		class="backdrop-filter backdrop-blur-[4px] bg-gray-900 bg-opacity-40"
 	>
-		<div class="w-full max-w-screen-2xl mx-auto p-4 md:py-8">
+		<div class="w-[100vw] max-w-screen-2xl mx-auto p-4 md:py-6">
 			<div class="sm:flex sm:items-center sm:justify-between">
 				<a href="#" class="w-fit flex flex-col items-center mb-4 mx-auto sm:mx-2 sm:mb-0 group hover:scale-105 transition-all duration-200">
 					<span
@@ -158,7 +168,7 @@
 				</ul>
 			</div>
 			<hr
-				class="my-6 border-gray-200 mx-auto dark:border-gray-700 lg:my-8"
+				class="my-4 border-gray-200 mx-auto dark:border-gray-700 lg:my-8"
 			/>
 			<div
 				class="block text-sm text-gray-600 text-center mb-2"
@@ -170,6 +180,8 @@
 			>
 		</div>
 	</footer>
+	</div>
+
 	
 
 	<script src="./js/register.js"></script>
