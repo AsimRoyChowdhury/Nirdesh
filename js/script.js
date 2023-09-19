@@ -104,9 +104,15 @@ delay(6000)
   .then(() => {
     mainSection.classList.remove("hidden");
     mainSection.classList.add("fade-in");
-    document.body.style.height = '1000vh';
+    if(mediaQuerySmall.matches){
+      document.body.style.height = '700vh';
+    } else {
+      document.body.style.height = '1100vh';
+    }
   });
   
+const mediaQuerySmall = window.matchMedia("screen and (max-width: 700px)");
+
 window.addEventListener('scroll', function() {
   const fixedDiv = document.getElementById('fixed-div');
   const heroSection = document.getElementById('hero-section');
@@ -116,7 +122,7 @@ window.addEventListener('scroll', function() {
   const aboutUsSection = document.getElementById('about-us-section');
   const timeline = document.getElementById('timeline');
   const team = document.getElementById("team");
-  const mediaQuerySmall = window.matchMedia("screen and (max-width: 700px)");
+  const rewards = document.getElementById("rewards");
   let blur = 0;
 
   if (window.scrollY / 500 > 2) {
@@ -170,7 +176,7 @@ window.addEventListener('scroll', function() {
         
         aboutUs.classList.add("hidden");
         aboutUsPara.classList.add("hidden");
-      } else if (blur > 40 && blur <= 46) {
+      } else if (blur > 40 && blur <= 44) {
         team.classList.add('hidden');
         timeline.classList.remove('hidden');
         
@@ -180,8 +186,17 @@ window.addEventListener('scroll', function() {
         timeline.classList.add('hidden');
 
         team.style.opacity = (blur-46)/2;
+      }else if(blur > 66 && blur <= 72){
+        rewards.classList.add('hidden');
+        team.classList.remove('hidden');
+
+        team.style.opacity = 1/(blur-66);
+      } else if(blur > 72){
+        rewards.classList.remove('hidden');
+        team.classList.add('hidden');
+
+        rewards.style.opacity = (blur-72)/2;
       }
-      console.log(blur);
     } else {                                              //Executes when the screen width is more than 800px
       blur = (blur / 4) - 1.5;                            //Adjustifying the blur number because of the bigger screen which is why bigger scroll value is required
       if(blur < 4){
@@ -218,7 +233,7 @@ window.addEventListener('scroll', function() {
 
         aboutUs.classList.remove("hidden");
         aboutUsPara.classList.remove("hidden");
-      } else if (blur > 12 && blur <= 16) {
+      } else if (blur > 12 && blur <= 20) {
         timeline.classList.remove('hidden');
         aboutUsSection.classList.add('hidden');
         
@@ -227,16 +242,26 @@ window.addEventListener('scroll', function() {
         
         aboutUs.classList.add("hidden");
         aboutUsPara.classList.add("hidden");
-      } else if (blur > 16 && blur <= 22){
+      } else if (blur > 20 && blur <= 24){
         team.classList.add('hidden');
         timeline.classList.remove('hidden');
         
-        timeline.style.opacity = 1/(blur-15);
-      } else if(blur > 22 && blur <= 28){
-        team.classList.remove('hidden');
+        timeline.style.opacity = 1/(blur-19);
+      } else if(blur > 24 && blur <= 32){
         timeline.classList.add('hidden');
+        team.classList.remove('hidden');
 
-        team.style.opacity = (blur-22)/2;
+        team.style.opacity = (blur-24)/2;
+      } else if(blur > 32 && blur <= 38){
+        rewards.classList.add('hidden');
+        team.classList.remove('hidden');
+
+        team.style.opacity = 1/(blur-32);
+      } else if(blur > 38){
+        rewards.classList.remove('hidden');
+        team.classList.add('hidden');
+
+        rewards.style.opacity = (blur-34)/2;
       }
     }
   } else if (heroSection.getBoundingClientRect().bottom >= 0) {
