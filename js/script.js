@@ -104,20 +104,19 @@ delay(6000)
   .then(() => {
     mainSection.classList.remove("hidden");
     mainSection.classList.add("fade-in");
-    document.body.style.height = '800vh';
+    document.body.style.height = '1000vh';
   });
   
 window.addEventListener('scroll', function() {
-  let fixedDiv = document.getElementById('fixed-div');
-  let heroSection = document.getElementById('hero-section');
-  let aboutUs = document.getElementById('about-us');
-  let image = document.getElementById('image');
-  let aboutUsPara = document.getElementById('about-us-para');
-  let aboutUsSection = document.getElementById('about-us-section');
-  let timeline = document.getElementById('timeline');
-  let codingImage = document.getElementById('coding-image');
+  const fixedDiv = document.getElementById('fixed-div');
+  const heroSection = document.getElementById('hero-section');
+  const aboutUs = document.getElementById('about-us');
+  const image = document.getElementById('image');
+  const aboutUsPara = document.getElementById('about-us-para');
+  const aboutUsSection = document.getElementById('about-us-section');
+  const timeline = document.getElementById('timeline');
+  const team = document.getElementById("team");
   const mediaQuerySmall = window.matchMedia("screen and (max-width: 700px)");
-  const mediaQueryMedium = window.matchMedia("screen and (min-width: 700px) and (max-width: 800px)");
   let blur = 0;
 
   if (window.scrollY / 500 > 2) {
@@ -162,7 +161,7 @@ window.addEventListener('scroll', function() {
 
         aboutUs.classList.remove("hidden");
         aboutUsPara.classList.remove("hidden");;
-      } else if (blur > 20) {
+      } else if (blur > 20 && blur <= 40) {
         timeline.classList.remove('hidden');
         aboutUsSection.classList.add('hidden');
         
@@ -171,10 +170,18 @@ window.addEventListener('scroll', function() {
         
         aboutUs.classList.add("hidden");
         aboutUsPara.classList.add("hidden");
-      } else {
-        aboutUs.classList.remove('hidden');
-        aboutUsPara.classList.remove('hidden');
+      } else if (blur > 40 && blur <= 46) {
+        team.classList.add('hidden');
+        timeline.classList.remove('hidden');
+        
+        timeline.style.opacity = 1/(blur-40);
+      } else if (blur > 46 && blur <= 66) {
+        team.classList.remove('hidden');
+        timeline.classList.add('hidden');
+
+        team.style.opacity = (blur-46)/2;
       }
+      console.log(blur);
     } else {                                              //Executes when the screen width is more than 800px
       blur = (blur / 4) - 1.5;                            //Adjustifying the blur number because of the bigger screen which is why bigger scroll value is required
       if(blur < 4){
@@ -211,24 +218,33 @@ window.addEventListener('scroll', function() {
 
         aboutUs.classList.remove("hidden");
         aboutUsPara.classList.remove("hidden");
-      } else if (blur > 12) {
+      } else if (blur > 12 && blur <= 16) {
         timeline.classList.remove('hidden');
         aboutUsSection.classList.add('hidden');
         
         timeline.style.opacity = (blur-12)/2 ;
-        codingImage.style.opacity = Math.min((blur-12)/2, 0.5) ;
         
         
         aboutUs.classList.add("hidden");
         aboutUsPara.classList.add("hidden");
-      } 
+      } else if (blur > 16 && blur <= 22){
+        team.classList.add('hidden');
+        timeline.classList.remove('hidden');
+        
+        timeline.style.opacity = 1/(blur-15);
+      } else if(blur > 22 && blur <= 28){
+        team.classList.remove('hidden');
+        timeline.classList.add('hidden');
+
+        team.style.opacity = (blur-22)/2;
+      }
     }
   } else if (heroSection.getBoundingClientRect().bottom >= 0) {
     fixedDiv.classList.remove('fixed');
     aboutUsPara.classList.add("hidden");
     aboutUs.classList.add("hidden");
   }
-
+  
 });
 
 function nirdeshAnnouncement(tick) {
@@ -269,4 +285,14 @@ function prizeDistribution(tick) {
 	counter.onupdate = function(value) {
 	tick.value = value;
 	};
+}
+const teamMembersDiv = document.getElementById("team-members-div");
+const teamMembers = document.getElementById("team-members");
+
+const clone = teamMembers.cloneNode(true);
+
+for (let i = 0; i < 10; i++) {
+    const clone = teamMembers.cloneNode(true);
+    clone.id = "team-member-"+i;  // Clone each element
+    teamMembersDiv.appendChild(clone);  // Append the cloned element
 }
