@@ -149,16 +149,32 @@ animation: typewriter 1s steps(27) 1s 1 normal both,
   font-weight: 600;
   background-image: linear-gradient(
     90deg,
-    #045777 10%,
-    #005f73 20%,
-    #0a9396 30%,
-    #546519 40%,
-    #d3a826 50%,
-    #ee9b00 60%,
-    #ca6702 70%,
-    #bb3e03 80%,
-    #ae2012 90%,
-    #621315 100%
+    #f12711 33%,
+    #f5af19 66%,
+    #f12711 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+      font-size: 2vw;
+}
+
+.animate-charcter-cs
+{
+  text-transform: uppercase;
+  font-weight: 600;
+  background-image: linear-gradient(
+    90deg,
+    #12c2e9 25%,
+    #c471ed 50%,
+    #f64f59 75%,
+    #12c2e9 100%
   );
   background-size: auto auto;
   background-clip: border-box;
@@ -226,7 +242,7 @@ animation: typewriter 1s steps(27) 1s 1 normal both,
 
 
 .nirdesh-heading{
-  font-size: 9vh;
+  font-size: 15vw;
   font-weight: 500;
 }
 .about-us{
@@ -311,6 +327,14 @@ animation: typewriter 1s steps(27) 1s 1 normal both,
 .tick-group {
   margin:0 0.1em;
   text-align:center;
+  display: flex;
+}
+.tick-group::after{
+  padding-left: 0.5rem;
+  content: ":";
+}
+.tick-group:last-child::after{
+  content: "";
 }
 
 .tick-text-inline {
@@ -387,5 +411,18 @@ animation: typewriter 1s steps(27) 1s 1 normal both,
     margin:0 0.5em;
     text-align:center;
   }
+
+  .tick-group::after{
+    padding-left: 0.5rem;
+    content: ":";
+    font-size: x-large;
+  }
 }
 
+@media (min-width: 1400px){
+  .tick-group::after{
+    padding-left: 0.5rem;
+    content: ":";
+    font-size: xx-large;
+  }
+}

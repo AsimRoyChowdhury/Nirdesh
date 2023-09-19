@@ -28,6 +28,15 @@
 .tick-group {
   margin:0 0.1em;
   text-align:center;
+  display: flex;
+}
+.tick-group::after{
+  padding-left: 0.5rem;
+  content: ":";
+  color: #ffffff;
+}
+.tick-group:last-child::after{
+  content: "";
 }
 
 .tick-text-inline {
@@ -55,6 +64,7 @@
    border-radius:0.12em !important; 
 }
 
+
 @media (min-width: 769px){
    .tick-flip,.tick-text-inline {
       font-size:2.5em;
@@ -64,4 +74,42 @@
       margin:0 0.5em;
       text-align:center;
     }
+  
+    .tick-group::after{
+      padding-left: 0.5rem;
+      content: ":";
+      font-size: xx-large;
+    }
+}
+
+@media (min-width: 1308px){
+  .tick-group::after{
+    padding-left: 1rem;
+    content: ":";
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 1608px){
+  .tick-group::after{
+    padding-left: 1rem;
+    content: ":";
+    font-size: 3.5rem;
+  }
+}
+
+@media (min-width: 2000px){
+  .tick-group::after{
+    padding-left: 1rem;
+    content: ":";
+    font-size: 4rem;
+  }
+}
+
+@media (min-width: 2300px){
+  .tick-group::after{
+    padding-left: 1rem;
+    content: ":";
+    font-size: 5.5rem;
+  }
 }
