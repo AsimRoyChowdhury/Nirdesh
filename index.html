@@ -40,7 +40,15 @@
   <div id="loader" class="w-full h-[100vh] flex item-center justify-center fixed z-50 bg-gray-800">
     <lottie-player class="mx-auto my-auto w-[60%] sm:w-[40%]" src="/assets/nirdes loading.json" background="transparent"  speed="0.8" loop autoplay></lottie-player>
   </div>
-  <div  class="absolute z-10 w-full h-full items-center justify-center pb-10">
+  <div class="fixed item-center w-full z-30 md:h-[8%] h-[6%] flex bg-gray-900 bg-opacity-80 backdrop-blur-sm justify-between">
+    <div class="items-center justify-center gap-x-4 my-auto ml-20 flex">
+      <div class="text-transparent bg-clip-text bg-gradient-to-b from-pink-600 to-orange-500 font-[Plutur] text-3xl md:text-5xl">&lt; Nirdesh &gt;</Nirdesh></div>  
+    </div>
+    <div class="flex item-center justify-end w-[40%] h-fit my-auto mr-11">
+      <a href="https://nirdesh.ilib.website/register" class="font-[Plutur] text-white text-sm md:text-xl xl:text-3xl font-bold hover:underline hover:underline-offset-4 hover:cursor-pointer">Register</a>
+    </div>
+  </div>
+  <div  class="absolute z-10 w-full h-full items-center justify-center pb-10 mt-12 md:mt-20">
     <div id="hero-section" class="slide-in-blurred-bottom my-10 mx-auto" style="width: 90vw;">
       <div class=" flex-col w-full h-full pb-1 sm:pb-6 items-center justify-center  border-4 bg-slate-800 bg-opacity-80  border-blue-400 shadow-blue-400 sm:rounded-2xl rounded-lg ">
         <div
@@ -137,7 +145,7 @@
         </div>
       </div>
     </div>
-    <div id="fixed-div" class="relative justify-center hidden w-full h-full flex">
+    <div id="fixed-div" class="relative justify-center hidden w-full h-full flex pt-16 md:pt-20">
       
       <div id="about-us-section" class="relative w-full h-full overflow-hidden justify-items-center align-middle">
         <img id="image" class="absolute z-[-1] object-cover " style="height: 100vh; width: 100vw;" src="./assets/about_us_bg.jpg " alt="">
@@ -418,7 +426,7 @@ C:/></pre>
     </div>
     <div
     id="team"
-    class="flex hidden flex-col sm:m-2 m-4 w-[95%] h-[95vh] pb-1 sm:pb-6 border-4 bg-slate-800 bg-opacity-60 border-blue-400 shadow-blue-400 sm:rounded-2xl rounded-lg"
+    class="flex hidden flex-col sm:m-2 m-4 w-[95%] pb-1 sm:pb-6 border-4 bg-slate-800 bg-opacity-60 border-blue-400 shadow-blue-400 sm:rounded-2xl rounded-lg"
   >
   <div
   class="w-full mb-2 sm:mb-4 justify-between flex h-auto bg-gray-600 sm:rounded-t-xl rounded-t-sm"
@@ -504,8 +512,8 @@ C:/></pre>
       </div>
     </div>
   </div>
-  
-    </div>
+
+</div>
   </div>
 
 <script src="./js/script.js"></script>
