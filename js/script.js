@@ -12,8 +12,9 @@ const linesOfCode = [
   '   public static void <span class="text-blue-500">main</span><span class="text-gray-200">(</span>String<span class="text-gray-200">[] args) {</span>',
   '       //Get Started for the most enthusiastic coding competition',
   '       //Initiating Nirdesh',
+  '       <span class="text-yellow-700">String</span> dept =  <span class="text-green-700">"Department of Computer Science"</span>;',
   '       <span class="text-yellow-700">String</span> organiser =  <span class="text-green-700">"Ramakrishna Mission Vivekananda Centenary College"</span>;',
-  '       <span class="text-yellow-700">System</span>.out.println(<span class="text-green-700">"Organised by \\n"</span> + organiser);',
+  '       <span class="text-yellow-700">System</span>.out.println(<span class="text-green-700">"Organised by \\n"</span> + dept + <span class="text-green-700">"\\n"</span> organiser);',
   '    }',
   '}'
 ];
@@ -70,7 +71,7 @@ linesOfCode.forEach((line, index) => {
       }, typewriter) // Pass the typewriter instance as the thisArg parameter
       .start(), 1000);
     }
-  }, (1000 * index)+1000);
+  }, (1000 * index)+1500);
   
   
 });
@@ -391,11 +392,11 @@ let teamDetails = [
       avatar: "https://avatars.githubusercontent.com/u/85804741",
       desc: "Front End Developer",
 
-      socialLink1: "https://github.com/SayanDasDev",
+      socialLink1: "https://github.com/AsimRoyChowdhury",
 
-      socialLink2: "https://www.linkedin.com/in/das-sayan/",
+      socialLink2: "https://www.linkedin.com/in/asim-roy-chowdhury-b6a630233/",
 
-      socialLink3: "https://www.hackerrank.com/SayanDasDev",  
+      socialLink3: "https://www.hackerrank.com/asimrc2002",  
   },
   {
       id: 7,
@@ -415,11 +416,11 @@ const teamMembersDiv = document.getElementById("team-members-div");
 
 Object.values(teamDetails).map((val) => {
   teamMembersDiv.innerHTML += `
-      <div id="team-members" class="min-w-[250px] sm:min-w-[350px] h-fit flex flex-col text-center items-center backdrop-blur-[2px] bg-gray-900 bg-opacity-10 border-2 border-orange-400 py-8 px-4 rounded-xl group hover:backdrop-blur-[4px] hover:scale-105 hover:bg-opacity-20 transition-all duration-300">
+      <div id="team-members" class="min-w-[250px] sm:min-w-[350px] my-auto h-fit flex flex-col text-center items-center backdrop-blur-[2px] bg-gray-900 bg-opacity-10 border-2 border-orange-400 py-8 px-4 rounded-xl group hover:backdrop-blur-[4px] hover:scale-105 hover:bg-opacity-20 transition-all duration-300">
       <div class="group-hover:border-white group-hover:rounded-full transition-all flex items-center mb-4 justify-center rounded-lg w-40 h-40 overflow-hidden border-2 border-orange-800 duration-300">
         <img class="w-full h-full" src="${val.avatar}">
       </div>
-      <div class="font-[Plutur] font-bold text-2xl text-orange-500 underline underline-offset-4 group-hover:tracking-[0.3vw] transition-all duration-300">${val.name}</div>
+      <div class="font-[Plutur] font-bold text-xl sm:text-2xl text-orange-500 underline underline-offset-4 group-hover:tracking-wider transition-all duration-300">${val.name}</div>
       <div class="text-white italic p-4 text-sm select-none">                            </div>
       <div class="font-bold tracking-wider text-orange-800 text-sm font-[nusar] uppercase border border-orange-800 rounded-full px-4 pb-1 pt-2 bg-orange-300 group-hover:text-gray-300 group-hover:bg-orange-800 group-hover:border-gray-300">${val.desc}</div>
       <div class="flex w-full mt-4 gap-x-4 items-center justify-center group-hover:gap-x-10 transition-all duration-300">
