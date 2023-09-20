@@ -23,6 +23,10 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
+html{
+  user-select: none;
+}
+
 @font-face {
   font-family: 'anurati';
   src: url('../assets/Anurati.otf')  format('truetype');
@@ -277,13 +281,13 @@ animation: typewriter 1s steps(27) 1s 1 normal both,
   font-size: 0.6rem
 }
 
-#initial-code-1, #initial-code-2, #initial-code-9{
+#initial-code-1, #initial-code-2, #initial-code-10{
   margin-left: 6vw;
 }
-#initial-code-3, #initial-code-8{
+#initial-code-3, #initial-code-9{
   margin-left: 10vw;
 }
-#initial-code-4, #initial-code-5, #initial-code-6, #initial-code-7{
+#initial-code-4, #initial-code-5, #initial-code-6, #initial-code-7, #initial-code-8{
   margin-left: 14vw;
 }
 
@@ -386,13 +390,13 @@ animation: typewriter 1s steps(27) 1s 1 normal both,
   .brackets{
     width: 6vw;
   }
-  #initial-code-1, #initial-code-2, #initial-code-9{
+  #initial-code-1, #initial-code-2, #initial-code-10{
     margin-left: 12vw;
   }
-  #initial-code-3, #initial-code-8{
+  #initial-code-3, #initial-code-9{
     margin-left: 17vw;
   }
-  #initial-code-4, #initial-code-5, #initial-code-6, #initial-code-7{
+  #initial-code-4, #initial-code-5, #initial-code-6, #initial-code-7, #initial-code-8{
     margin-left: 22vw;
   }
   .terminal-code-text{
