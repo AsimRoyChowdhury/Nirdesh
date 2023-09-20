@@ -12,8 +12,8 @@ const mediaQuerySmall = window.matchMedia("screen and (max-width: 700px)");
 
 const linesOfCode = [
   'package org.rkmvcc.nirdesh',
-  'public class <span class="text-gray-200">Nirdesh {</span>',
-  '   public static void <span class="text-blue-500">main</span><span class="text-gray-200">(</span>String<span class="text-gray-200">[] args) {</span>',
+  'public class<span class="text-gray-200">&nbsp;Nirdesh {</span>',
+  '   public static void<span class="text-blue-500">&nbsp;main</span><span class="text-gray-200">(</span>String<span class="text-gray-200">[] args) {</span>',
   '       //Get Started for the most enthusiastic coding competition',
   '       //Initiating Nirdesh',
   '       <span class="text-yellow-700">String</span> dept =  <span class="text-green-700">"Department of Computer Science"</span>;',
