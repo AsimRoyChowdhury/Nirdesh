@@ -12,6 +12,19 @@ const mediaQuerySmall = window.matchMedia("screen and (max-width: 700px)");
 
 const linesOfCode = [
   'package org.rkmvcc.nirdesh',
+  'public class<span class="text-gray-200"> Nirdesh {</span>',
+  '   public static void<span class="text-blue-500"> main</span><span class="text-gray-200">(</span>String<span class="text-gray-200">[] args) {</span>',
+  '       //Get Started for the most enthusiastic coding competition',
+  '       //Initiating Nirdesh',
+  '       <span class="text-yellow-700">String</span> dept =  <span class="text-green-700">"Department of Computer Science"</span>;',
+  '       <span class="text-yellow-700">String</span> organiser =  <span class="text-green-700">"Ramakrishna Mission Vivekananda Centenary College"</span>;',
+  '       <span class="text-yellow-700">System</span>.out.println(<span class="text-green-700">"Organised by \\n"</span> + dept + <span class="text-green-700">"\\n"</span> organiser);',
+  '    }',
+  '}'
+];
+
+const linesOfCode2 = [
+  'package org.rkmvcc.nirdesh',
   'public class<span class="text-gray-200">&nbsp;Nirdesh {</span>',
   '   public static void<span class="text-blue-500">&nbsp;main</span><span class="text-gray-200">(</span>String<span class="text-gray-200">[] args) {</span>',
   '       //Get Started for the most enthusiastic coding competition',
@@ -27,7 +40,7 @@ window.onload = function(){
   loader.style.display = "none";
 
   if(sessionStorage.getItem('visited')){
-    linesOfCode.forEach ((line, index) => {
+    linesOfCode2.forEach ((line, index) => {
       codeText[index].innerHTML = line;
     });
     nirdeshWriting.classList.remove("hidden");
