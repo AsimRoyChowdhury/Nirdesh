@@ -98,3 +98,50 @@ const loader = document.getElementById("loader");
 window.onload = function(){
 	loader.style.display = "none";
 }
+
+let faq = [
+  {
+    id: 0,
+    ques: "For this question what topics of web development would be asked?",
+    ans: "Okay we will rather not ask topics from web development but it is something different and amazing, there will be some mystery detective questions , you will need to find the answers which will be hidden. for finding out the answer you will need the knowledge of web development like inspecting the page etc.",
+  },
+];
+
+const faqs = document.getElementById("faqs");
+
+Object.values(faq).map((val) => {
+  faqs.innerHTML += `
+  <div id="faq-div-${val.id}" onclick="expand(${val.id})" class="w-full flex flex-col border mb-4 sm:border-2 border-gray-600 rounded-lg sm:rounded-xl p-1 sm:p-4 shadow-2xl">
+    <div class="w-full flex text-sm lg:text-xl font-bold text-green-700">
+    ${val.id+1}) ${val.ques}
+      <div id="faq-dropdown-${val.id}" class="ml-auto">
+        <svg class="h-10 hidden md:block" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M7 10L12 15L17 10" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+      </div>
+    </div>
+    <div id="faq-ans-${val.id}" class="w-full text-justify text-xs lg:text-lg text-gray-700 hidden">
+    ${val.ans}
+    </div>
+  </div>
+  `
+});
+
+
+function expand(id){
+  const faqDiv = document.getElementById(`faq-div-`+id);
+  const faqDropdown = document.querySelector(`#faq-dropdown-${id} > svg`);
+  const faqAns = document.getElementById(`faq-ans-`+id);
+
+
+  if(faqAns.classList.contains("hidden")){
+    faqDiv.classList.add("shadow-pop-tr");
+    faqDiv.classList.remove("shadow-pop-tr-reverse");
+    faqAns.classList.remove("hidden");
+    faqDropdown.classList.add("rotate-180");
+  } else {
+    faqDiv.classList.add("shadow-pop-tr-reverse");
+    faqDiv.classList.remove("shadow-pop-tr");
+    faqAns.classList.add("hidden");
+    faqDropdown.classList.remove("rotate-180");
+  }
+
+}
