@@ -102,8 +102,8 @@ window.onload = function(){
 let faq = [
   {
     id: 0,
-    ques: "For this question what topics of web development would be asked?",
-    ans: "Okay we will rather not ask topics from web development but it is something different and amazing, there will be some mystery detective questions , you will need to find the answers which will be hidden. for finding out the answer you will need the knowledge of web development like inspecting the page etc.",
+    ques: "What topics of web development would be asked?",
+    ans: "We will not ask topics from web development but it is something different and amazing, there will be some mystery detective questions , you will need to find the answers which will be hidden. for finding out the answer you will need the knowledge of web development like inspecting the page etc.",
   },
 ];
 
