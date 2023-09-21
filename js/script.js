@@ -359,7 +359,7 @@ let teamDetails = [
   },
   {
     id: 1,
-    name: "Prasenjit Das",
+    name: "Prof. Prasenjit Das",
     avatar: "https://bijit.xyz/cockpit-master/storage/uploads/2023/09/19/download_uid_6509e1f246ee2.jpg",
     desc: "Organizing Head",
 
