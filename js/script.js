@@ -304,11 +304,20 @@ window.addEventListener('scroll', function() {
   
 });
 
+const countdown = document.querySelectorAll(".countdown");
+
 function nirdeshAnnouncement(tick) {
 	var counter = Tick.count.down('2023-09-15T00:00:00+05:30');
 
 	counter.onupdate = function(value) {
 	tick.value = value;
+  var num = 0;
+  value.forEach(element => {
+    num += element;
+  });
+  if(num == 0){
+    countdown[0].classList.add("hidden");
+  }
 	};
 }
 
@@ -317,6 +326,13 @@ function registrationStart(tick) {
 
 	counter.onupdate = function(value) {
 	tick.value = value;
+  var num = 0;
+  value.forEach(element => {
+    num += element;
+  });
+  if(num == 0){
+    countdown[1].classList.add("hidden");
+  }
 	};
 }
 
@@ -325,6 +341,13 @@ function registrationEnd(tick) {
 
 	counter.onupdate = function(value) {
 	tick.value = value;
+  var num = 0;
+  value.forEach(element => {
+    num += element;
+  });
+  if(num == 0){
+    countdown[2].classList.add("hidden");
+  }
 	};
 }
 
@@ -333,6 +356,13 @@ function contestStarts(tick) {
 
 	counter.onupdate = function(value) {
 	tick.value = value;
+  var num = 0;
+  value.forEach(element => {
+    num += element;
+  });
+  if(num == 0){
+    countdown[3].classList.add("hidden");
+  }
 	};
 }
 
@@ -341,6 +371,13 @@ function prizeDistribution(tick) {
 
 	counter.onupdate = function(value) {
 	tick.value = value;
+  var num = 0;
+  value.forEach(element => {
+    num += element;
+  });
+  if(num == 0){
+    countdown[4].classList.add("hidden");
+  }
 	};
 }
 
@@ -470,12 +507,5 @@ Object.values(teamDetails).map((val) => {
   `
 });
 
-// const clone = teamMembers.cloneNode(true);
-
-// for (let i = 0; i < 10; i++) {
-//     const clone = teamMembers.cloneNode(true);
-//     clone.id = "team-member-"+i;  // Clone each element
-//     teamMembersDiv.appendChild(clone);  // Append the cloned element
-// }
 
 
