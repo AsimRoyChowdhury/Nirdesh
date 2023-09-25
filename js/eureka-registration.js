@@ -105,6 +105,11 @@ let faq = [
     ques: "What topics of web development would be asked?",
     ans: "We will not ask topics from web development but it is something different and amazing, there will be some mystery detective questions , you will need to find the answers which will be hidden. for finding out the answer you will need the knowledge of web development like inspecting the page etc.",
   },
+  {
+    id: 1,
+    ques: "What if some team has already registered from my college?",
+    ans: "If someone has already registered from your college then after registration ends we will select only the first team registering from your college and all other teams that have registered from your college will be refunded and therefore they will disqualify.",
+  },
 ];
 
 const faqs = document.getElementById("faqs");
