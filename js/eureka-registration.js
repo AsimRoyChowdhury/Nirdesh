@@ -107,8 +107,8 @@ let faq = [
   },
   {
     id: 1,
-    ques: "What if some team has already registered from my college?",
-    ans: "If someone has already registered from your college then after registration ends we will select only the first team registering from your college and all other teams that have registered from your college will be refunded and therefore they will disqualify.",
+    ques: "Can multiple Teams from one college apply?",
+    ans: "Yes, multiple Teams from one college can apply now on Eureka",
   },
 ];
 
