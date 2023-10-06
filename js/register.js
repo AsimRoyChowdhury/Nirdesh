@@ -51,9 +51,6 @@ function openEurekaModal(){
 	body.classList.add("overflow-hidden"); 
 }
 
-function openEureka(){
-	window.open("http://nirdesh.ilib.website/register/eureka-registration", "_self");
-}
 
 const loader = document.getElementById("loader");
 
