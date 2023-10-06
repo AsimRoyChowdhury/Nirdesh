@@ -1,0 +1,227 @@
+.blurred-in{
+-webkit-animation: blurred-in 0.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+          animation: blurred-in 0.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+@-webkit-keyframes blurred-in {
+0% {
+          -webkit-backdrop-filter: blur(0px);
+          backdrop-filter: blur(0px);
+}
+100% {
+          -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+}
+@keyframes blurred-in {
+0% {
+          -webkit-backdrop-filter: blur(0px);
+          backdrop-filter: blur(0px);
+}
+100% {
+          -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+}
+
+.scale-up-center {
+          -webkit-animation: scale-up-center 0.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+                    animation: scale-up-center 0.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+          
+@-webkit-keyframes scale-up-center {
+0% {
+          -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+}
+100% {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+}
+}
+@keyframes scale-up-center {
+0% {
+          -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+}
+100% {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+}
+}
+
+.scale-down-center {
+          -webkit-animation: scale-down-center 0.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+                    animation: scale-down-center 0.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+          
+@-webkit-keyframes scale-down-center {
+0% {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+}
+100% {
+          -webkit-transform: scale(0);
+          transform: scale(0);
+}
+}
+@keyframes scale-down-center {
+0% {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+}
+100% {
+          -webkit-transform: scale(0);
+          transform: scale(0);
+}
+}
+
+.blurred-out{
+-webkit-animation: blurred-out 0.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+          animation: blurred-out 0.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+@-webkit-keyframes blurred-out {
+0% {
+          -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+100% {
+          -webkit-backdrop-filter: blur(0px);
+          backdrop-filter: blur(0px);
+}
+}
+@keyframes blurred-out {
+0% {
+          -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+100% {
+          -webkit-backdrop-filter: blur(0px);
+          backdrop-filter: blur(0px);
+}
+}
+
+.tick {
+font-size:1rem; white-space:nowrap; font-family:arial,sans-serif;
+}
+
+.tick-flip,.tick-text-inline {
+font-size:1em;
+}
+
+.tick-label {
+margin-top:1em;font-size:1em;
+}
+
+.tick-char {
+width:1.5em;
+}
+
+.tick-text-inline {
+display:inline-block;
+text-align:center;
+min-width:1em;
+}
+
+.tick-text-inline+.tick-text-inline {
+margin-left:-.325em;
+}
+
+.tick-group {
+margin:0 0.1em;
+text-align:center;
+display: flex;
+}
+.tick-group::after{
+padding-left: 0.5rem;
+content: ":";
+color: #fff;
+text-align: center;
+align-items: center;
+justify-content: center;
+}
+.tick-group:last-child::after{
+display: none;
+}
+
+.tick-text-inline {
+          color: rgb(90, 93, 99) !important; 
+}
+
+.tick-label {
+          color: rgb(90, 93, 99) !important; 
+}
+
+.tick-flip-panel {
+          color: rgb(255, 255, 255) !important; 
+}
+
+
+.tick-flip-panel-text-wrapper {
+          line-height: 1.45 !important; 
+}
+
+.tick-flip-panel {
+          background-color: rgb(59, 61, 59) !important; 
+}
+
+.tick-flip {
+          border-radius:0.12em !important; 
+}
+
+
+@media (min-width: 769px){
+          .tick-flip,.tick-text-inline {
+          font-size:1.5em;
+          }
+
+          .tick-group {
+          margin:0 0.5em;
+          text-align:center;
+          }
+
+          .tick-group::after{
+          padding-left: 0.5rem;
+          content: ":";
+          font-size: x-large;
+          }
+}
+
+@media (min-width: 1308px){
+          .tick-flip,.tick-text-inline {
+                    font-size:2.5em;
+                    }
+.tick-group::after{
+          padding-left: 1rem;
+          content: ":";
+          font-size: 2.5rem;
+}
+}
+
+@media (min-width: 1608px){
+.tick-group::after{
+          padding-left: 1rem;
+          content: ":";
+          font-size: 3.5rem;
+}
+}
+
+@media (min-width: 2000px){
+.tick-group::after{
+          padding-left: 1rem;
+          content: ":";
+          font-size: 4rem;
+}
+}
+
+@media (min-width: 2300px){
+          .tick-flip,.tick-text-inline {
+                    font-size:5.5em;
+                    }
+.tick-group::after{
+          padding-left: 1rem;
+          content: ":";
+          font-size: 5.5rem;
+}
+}
