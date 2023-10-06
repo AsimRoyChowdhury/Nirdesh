@@ -29,7 +29,12 @@ html{
 
 @font-face {
   font-family: 'anurati';
-  src: url('../assets/Anurati.otf')  format('truetype');
+  src: url('../assets/Anurati.otf')  format('opentype');
+}
+
+@font-face {
+  font-family: 'montserrat';
+  src: url('../assets/Montserrat/Montserrat-VariableFont_wght.ttf')  format('truetype');
 }
 
 @font-face {
