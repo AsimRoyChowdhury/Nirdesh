@@ -9,22 +9,46 @@ window.onload = function(){
 
 var leaderboardDetails = [
 	{
-		rank: 1,
-		name: "Asim Roy Chowdhury",
-		points: "250",
-		hackerrank: "https://www.hackerrank.com/asimrc2002?hr_r=1"
+		rank: 4,
+		name: "Pritam Sarkar",
+		points: "206.67",
+		hackerrank: "https://www.hackerrank.com/pritamsarkar_ps1?"
 	},
 	{
-		rank: 2,
-		name: "Sayan Das",
-		points: "300",
-		hackerrank: "https://www.hackerrank.com/asimrc2002?hr_r=1"
+		rank: 5,
+		name: "Yuvraj Singh",
+		points: "200.00",
+		hackerrank: "https://www.hackerrank.com/yuvvraj567?"
 	},
 	{
-		rank: 3,
-		name: "Asim Roy Chowdhury",
-		points: "250",
-		hackerrank: "https://www.hackerrank.com/asimrc2002?hr_r=1"
+		rank: 6,
+		name: "Atul Chandra",
+		points: "200.00",
+		hackerrank: "https://www.hackerrank.com/atulchandra021?"
+	},
+    {
+		rank: 7,
+		name: "Shivam Das",
+		points: "147.54",
+		hackerrank: "https://www.hackerrank.com/shivamdas1612201?"
+	},
+    {
+		rank: 8,
+		name: "Sagnik Pal",
+		points: "108.98",
+		hackerrank: "https://www.hackerrank.com/sagnik2004?"
+	},
+    {
+		rank: 9,
+		name: "Soumya Chatterjee",
+		points: "100.98",
+		hackerrank: "https://www.hackerrank.com/soumyachatterje4?"
+	},
+    {
+		rank: 10,
+		name: "Priyankush Biswas",
+		points: "90.98",
+		hackerrank: "https://www.hackerrank.com/biswaspriyankush?"
 	},
 ];
 
