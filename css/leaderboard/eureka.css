@@ -1,0 +1,31 @@
+.leaderboard-template{
+	display: grid;
+	grid-template: 
+	"a b c" auto
+	"a d c" 240px;
+
+}
+
+.leaderboard-normal-template{
+	display: grid;
+	grid-template-columns: max(10%,80px) max(45%,200px) max(30%,200px) max(15%,100px);
+	gap: 0.5em;
+}
+
+@media (max-width: 769px) {
+	.leaderboard-template{
+		grid-template: 
+		"a b c" auto
+		"a d c" 120px;
+		gap: 1rem;
+	}
+}
+@media (max-width: 640px) {
+	.leaderboard-template{
+		grid-template: 
+		"b"
+		"a"
+		"c" auto;
+		gap: 1rem;
+		}
+}
