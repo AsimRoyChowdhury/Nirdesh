@@ -1,0 +1,7 @@
+.leaderboard-normal-template{
+	display: grid;
+	grid-template-columns: max(30%,80px) max(70%,200px);
+	gap: 0.5em;
+}
+
+
