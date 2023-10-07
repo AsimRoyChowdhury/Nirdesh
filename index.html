@@ -51,11 +51,27 @@
   </div>
   <div class="fixed item-center w-full z-30 md:h-[8%] h-[6%] flex bg-gray-900 bg-opacity-80 backdrop-blur-sm justify-between">
     <div class="items-center justify-center my-auto ml-4 sm:ml-20 flex">
-      <div class="text-transparent bg-clip-text bg-gradient-to-b w-fit flex from-pink-600 to-orange-500 font-[Plutur] text-lg sm:text-3xl md:text-5xl select-none">&lt; Nirdesh &gt;</Nirdesh></div>  
+      <div class="text-transparent bg-clip-text bg-gradient-to-b w-fit flex from-pink-600 to-orange-500 font-[Plutur] text-lg sm:text-3xl md:text-5xl select-none">&lt; Nirdesh &gt;</div>  
     </div>
-    <div class="flex item-center justify-end w-[40%] h-fit my-auto mr-4 sm:mr-11">
-      <a href="https://nirdesh.ilib.website/register" class="font-[Plutur] text-white text-sm md:text-xl xl:text-3xl font-bold hover:underline hover:underline-offset-4 hover:cursor-pointer">Register</a>
+    <div class="flex flex-col justify-end relative sm:w-[18%]">
+    <div onclick="openDropdown()" class="flex item-center h-fit my-auto mr-4 sm:mr-11">
+      <div class="font-[Plutur] text-white text-sm sm:text-xl md:text-2xl lg:text-3xl font-bold hover:underline hover:underline-offset-4 hover:cursor-pointer">Leaderboard</div>
     </div>
+	<div id="dropdownItems" class="hidden flex flex-col rounded lg:rounded-xl gap-2 py-2 absolute bg-gray-900 opacity-80 top-[3.2rem] sm:top-14 md:top-[4.5rem] lg:top-[4.5rem] w-[80%] lg:w-[90%] overflow-hidden">
+	  <div class="flex hover:bg-gray-700 pl-2 md:pl-4">
+		<a href="https://nirdesh.ilib.website/leaderboard/nirdesh" class="text-transparent bg-clip-text bg-gradient-to-b w-fit flex from-pink-600 to-orange-500 font-[Plutur] font-bold text-sm sm:text-xl md:text-2xl lg:text-3xl select-none tracking-widest">
+			Nirdesh
+		</a>
+	</div>
+	<div class="w-[90%] mx-auto bg-red-700 h-[0.1rem]"></div>
+	<div class="flex hover:bg-gray-700 pl-2 md:pl-4">
+		<a href="https://eureka.bijit.xyz/leaderboard"
+            class=" font-[anurati] text-sm sm:text-lg md:text-xl lg:text-2xl tracking-widest font-semibold whitespace-nowrap text-pink-600 transition-all duration-200 uppercase">
+			Eureka
+		</a>
+	</div>
+	</div>
+	</div>
     </div>
   <div  class="absolute z-10 w-full h-full items-center justify-center pb-10 mt-12 md:mt-20">
     <div id="hero-section" class="slide-in-blurred-bottom my-10 mx-auto" style="width: 90vw;">

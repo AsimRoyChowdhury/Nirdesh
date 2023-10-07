@@ -507,5 +507,10 @@ Object.values(teamDetails).map((val) => {
   `
 });
 
+var dropdownItems = document.getElementById("dropdownItems");
+
+function openDropdown() {
+  dropdownItems.classList.toggle("hidden");
+}
 
 
